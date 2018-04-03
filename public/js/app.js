@@ -7,10 +7,34 @@ const app = angular.module('codeBreak', []);
 app.controller('codeBreak', ['$http',function($http){
 
 this.test="testing"
+  this.answer= "";
+        this.getJoke = ()=>{
 
-        // this.getJokes = ()=>{
-        //
-        //
-        // }
+            //call $http function, takes an object parameter with method, url, and data propeties
+            $http(
+                {
+                    method:'GET',
+                    url:"https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke"
+
+                }
+            ).then(
+                (response)=>{
+                    console.log(response);
+                    console.log(response.data);
+                    console.log(response.data.setup);
+                    console.log(response.data.punchline);
+                    this.joke = response.data.setup;
+                    this.answer = response.data.punchline;
+                    this.showAnswer = false;
+                    console.log();
+                },
+                (error)=>{error})
+        }
+
+
+ this.getAnswer =()=>{
+    this.showAnswer=true;
+ }
+// this.getJoke();
 
 }])

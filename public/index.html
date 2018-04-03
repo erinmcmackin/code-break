@@ -9,9 +9,16 @@
     </head>
     <body ng-controller='codeBreak as ctrl'>
         <h1>Test</h1>
-        {{2+2}}
-        {{ctrl.test}}
+        <!-- {{2+2}}
+        {{ctrl.test}} -->
 
+    <!-- <form class="" > -->
+        <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
+    <!-- </form> -->
+        <h4>{{ctrl.joke}}</h4></br>
+
+        <button ng-click="ctrl.getAnswer()" >Show Answer</button>
+        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
     </body>
 
 </html>
