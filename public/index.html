@@ -24,6 +24,17 @@
             <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
 </div>
 
+        <form ng-submit="ctrl.createUser()" class="" >
+            UserName:  <input ng-model="ctrl.username" type="text" name="" value="">
+            Password: <input ng-model="ctrl.password" type="text" name="" value="">
+            <button type="submit" name="button">CreateUser</button>
+        </form>
+
+        <form ng-submit="ctrl.createSession()" class="" >
+            UserName:  <input ng-model="ctrl.username" type="text" name="" value="">
+            Password: <input ng-model="ctrl.password" type="text" name="" value="">
+            <button type="submit" name="button">LogIn</button>
+        </form>
 
         <form ng-submit="" class="" action="index.html" method="post">
             Joke: <input ng-model="ctrl.joke" type="text" name="" value="" placeholder="Enter your joke">
