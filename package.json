@@ -1,0 +1,23 @@
+{
+  "name": "code-break",
+  "version": "1.0.0",
+  "description": "Team: Erin McMackin & Teilachanell",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erinmcmackin/code-break.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erinmcmackin/code-break/issues"
+  },
+  "homepage": "https://github.com/erinmcmackin/code-break#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.12"
+  }
+}
