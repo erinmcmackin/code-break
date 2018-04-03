@@ -48,5 +48,32 @@ this.test="testing"
  //
  // }
 // this.getJoke();
+this.createUser = ()=>{
+    $http(
+        {
+            method: 'POST',
+            url: '/users',
+            data:{
+                username: this.username,
+                password: this.password
+            }
+        }
+    ).then((response)=>{console.log(response);}, (error)=>{error})
+}
+
+
+this.createSession = ()=>{
+    $http(
+        {
+            method: 'POST',
+            url: '/sessions',
+            data:{
+                username: this.username,
+                password: this.password
+            }
+        }
+    ).then( (response)={console.log(response);},(error)=>{error})
+}
+
 
 }])
