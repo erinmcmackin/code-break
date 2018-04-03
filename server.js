@@ -20,7 +20,7 @@ app.use('/jokes', jokesController);
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 
-const sessionsController = require('./controllesr/sessions.js');
+const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 app.get('/app', (req, res)=>{
