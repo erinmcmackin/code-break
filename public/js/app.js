@@ -84,14 +84,14 @@ this.createSession = ()=>{
     ).then( (response)=>{console.log(response);},(error)=>{error})
 }
 
-// this.deleteSession = ()=>{
-//     $http(
-//         {
-//             method: 'DELETE',
-//             url: '/sessions/'
-//         }
-//     )then.((response)=>{response}, (error)=>{error})
-// }
+this.deleteSession = ()=>{
+    $http(
+        {
+            method: 'DELETE',
+            url: '/sessions'
+        }
+    ).then((response)=>{console.log(response);}, (error)=>{error})
+}
 
 
 }])

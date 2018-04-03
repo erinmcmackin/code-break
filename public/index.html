@@ -43,7 +43,10 @@
             <button type="submit" name="button">LogIn</button>
         </form>
 
-        <button type="submit" name="button">LogOut</button>
+        <form ng-submit="ctrl.deleteSession()" class="">
+            <button type="submit" name="button">LogOut</button>
+        </form>
+
 
         <form ng-submit="" class="" action="index.html" method="post">
             Joke: <input ng-model="ctrl.joke" type="text" name="" value="" placeholder="Enter your joke">
