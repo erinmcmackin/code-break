@@ -15,7 +15,6 @@ this.test="testing"
                 {
                     method:'GET',
                     url:"https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke"
-
                 }
             ).then(
                 (response)=>{
@@ -35,6 +34,19 @@ this.test="testing"
  this.getAnswer =()=>{
     this.showAnswer=true;
  }
+
+ // this.createJoke = ()=>{
+ //        $http({
+ //            method: 'POST',
+ //            url: '/jokes',
+ //            data:{
+ //                joke:
+ //                answer:
+ //            }
+ //        }).then((response)=>{console.log(response); this.joke = response.data.joke; this.answer = response.data.answer},
+ //         (error)=>{error}
+ //
+ // }
 // this.getJoke();
 
 }])

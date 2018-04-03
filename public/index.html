@@ -12,13 +12,24 @@
         <!-- {{2+2}}
         {{ctrl.test}} -->
 
-    <!-- <form class="" > -->
-        <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
-    <!-- </form> -->
-        <h4>{{ctrl.joke}}</h4></br>
+<div class="">
+    <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
+    <h4>{{ctrl.joke}}</h4></br>
+</div>
 
-        <button ng-click="ctrl.getAnswer()" >Show Answer</button>
-        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
+
+<div class="">
+
+            <button ng-click="ctrl.getAnswer()" >Show Answer</button>
+            <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
+</div>
+
+
+        <form ng-submit="" class="" action="index.html" method="post">
+            Joke: <input ng-model="ctrl.joke" type="text" name="" value="" placeholder="Enter your joke">
+            Punchline:<input ng-model="ctrl.answer" type="text" name="" value="" placeholder=" Enter your answer">
+        </form>
+
     </body>
 
 </html>
