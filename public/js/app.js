@@ -2,6 +2,8 @@ console.log("app.js is connected");
 
 //create module with name app.
 const app = angular.module('codeBreak', []);
+
+
 //'ngRoute'
 // app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
 //     $locationProvider.html5Mode({enabled:true});
@@ -22,6 +24,11 @@ app.controller('codeBreak', ['$http',function($http){
   this.showCreateUser = true;
   this.formdata = {};
   this.indexOfEditFormToShow;
+
+  this.includePath = 'partials/jokes.html'
+  this.changeInclude = (path)=>{
+      this.includePath = 'partials/'+path+'.html'
+    }
 
   // =============
   // JOKES
