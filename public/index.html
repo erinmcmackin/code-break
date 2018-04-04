@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="js/app.js" type="text/javascript"> </script>
+        <link rel="stylesheet" href="css/style.css">
         <title></title>
     </head>
     <body ng-controller='codeBreak as ctrl'>
@@ -39,53 +40,55 @@
 
 <!--==== JOKE GENERATOR  ====-->
 
-    <!--Get Jokes  -->
-      <div class="">
-          <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
-          <h4>{{ctrl.joke}}</h4></br>
-      </div>
-
-
-    <!--Get Jokes  -->
-      <div class="">
+    <!--Get Jokes & Punchlines -->
+    <div class="jokes">
+      <div class="jokes-buttons">
+        <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
         <button ng-click="ctrl.getAnswer()" >Show Answer</button>
-        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
       </div>
-
+      <div class="joke-person">
+        <img src="https://camo.githubusercontent.com/fd2516798dfd7267b85bb93425a016bd7c33900d/687474703a2f2f692e696d6775722e636f6d2f57486e7541324f2e676966" alt="pusheen" />
+      </div>
+      <div class="joke-setup">
+        <h4 ng-if="ctrl.showJoke">{{ctrl.joke}}</h4>
+        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
+        <img class="speech-bubble" src="http://www.clker.com/cliparts/g/w/n/A/V/1/speech-bubble-hi.png" alt="speech-bubble">
+      </div>
+    </div>
 
       <!-- FORUM IMAGES & CAPTIONS -->
-      <div class="image-forum">
-        <form ng-submit="ctrl.createImage()" class="image-create">
+    <div class="image-forum">
+      <form ng-submit="ctrl.createImage()" class="image-create">
 
-          <label for="image-create">Image URL</label>
-            <input ng-model="ctrl.image" type="text" id="image-create">
+        <label for="image-create">Image URL</label>
+          <input ng-model="ctrl.image" type="text" id="image-create">
 
-          <label for="caption-create">Caption</label>
-            <input ng-model="ctrl.caption" type="text" id="caption-create">
+        <label for="caption-create">Caption</label>
+          <input ng-model="ctrl.caption" type="text" id="caption-create">
 
-          <input type="submit" value="Post">
+        <input type="submit" value="Post">
+      </form>
+
+
+    <!-- SHOW IMAGES -->
+      <div ng-repeat="image in ctrl.images" class="image">
+        <h3>{{image.caption}}</h3>
+        <img ng-src="{{image.image}}" alt="{{image.caption}}">
+
+      <!-- DELETE IMAGE -->
+        <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+
+      <!-- EDIT IMAGE LINK -->
+        <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+
+      <!-- EDIT IMAGE FORM -->
+        <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
+          <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
+          <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
+          <input type="submit" value="Update">
         </form>
-
-
-        <!-- SHOW IMAGES -->
-        <div ng-repeat="image in ctrl.images" class="image">
-          <h3>{{image.caption}}</h3>
-          <img ng-src="{{image.image}}" alt="{{image.caption}}">
-
-        <!-- DELETE IMAGE -->
-          <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
-
-        <!-- EDIT IMAGE LINK -->
-          <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
-
-        <!-- EDIT IMAGE FORM -->
-          <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
-            <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
-            <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
-            <input type="submit" value="Update">
-          </form>
-        </div>
       </div>
+    </div>
 
               <!-- <ul ng-repeat="user in ctrl.users">
                   <li>{{user.username}}</li>
