@@ -61,14 +61,14 @@ this.createUser = ()=>{
     ).then((response)=>{console.log(response);}, (error)=>{error})
 }
 
-this.deleteUser = (id)=>{
-    $http(
-        {
-            method:'DELETE',
-            url:'/users/' + id
-        }
-    )then.((response)=>{console.log(response);}, (error)=>{error})
-}
+// this.deleteUser = (id)=>{
+//     $http(
+//         {
+//             method:'DELETE',
+//             url:'/users/' + id
+//         }
+//     )then.((response)=>{console.log(response);}, (error)=>{console.log(error);})
+// }
 
 
 this.createSession = ()=>{
@@ -88,8 +88,10 @@ this.deleteSession = ()=>{
     $http(
         {
             method: 'DELETE',
-            url: '/sessions/'
+            url: '/sessions'
         }
-    )then.((response)=>{response}, (error)=>{error})
+    ).then((response)=>{console.log(response);}, (error)=>{error})
 }
+
+
 }])
