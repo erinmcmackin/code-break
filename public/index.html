@@ -8,56 +8,77 @@
     </head>
     <body ng-controller='codeBreak as ctrl'>
       <h1>Code Break</h1>
-        <!-- {{2+2}}
-        {{ctrl.test}} -->
+
+
+  <!--==== USER INFO ====-->
+        <!-- CREATE USER  -->
       <form ng-if="ctrl.showCreateUser" ng-submit="ctrl.createUser()" class="create-user" >
         <label for="username-create">Username</label>
-          <input ng-model="ctrl.username" type="text" id="username-create">
+            <input ng-model="ctrl.username" type="text" id="username-create">
+
         <label for="password-create">Password</label>
-          <input ng-model="ctrl.password" type="password" id="password-create">
-          <button type="submit" name="button">CreateUser</button>
+            <input ng-model="ctrl.password" type="password" id="password-create">
+        <button type="submit" name="button">CreateUser</button>
       </form>
 
+        <!--LOGIN  -->
       <form ng-if="ctrl.showLogIn" ng-submit="ctrl.createSession()" class="login" >
         <label for="username-login">Username</label>
           <input ng-model="ctrl.username" type="text" id="username-login">
+
         <label for="password-login">Password</label>
           <input ng-model="ctrl.password" type="password" id="password-login">
-          <button type="submit" name="button">Log In</button>
+        <button type="submit" name="button">Log In</button>
       </form>
 
+      <!--LOGOUT  -->
       <form ng-if="ctrl.showLogOut" ng-submit="ctrl.deleteSession()" class="logout">
           <button type="submit" name="button">Log Out</button>
       </form>
 
+
+<!--==== JOKE GENERATOR  ====-->
+
+    <!--Get Jokes  -->
       <div class="">
           <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
           <h4>{{ctrl.joke}}</h4></br>
       </div>
 
 
+    <!--Get Jokes  -->
       <div class="">
         <button ng-click="ctrl.getAnswer()" >Show Answer</button>
         <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
       </div>
-      <!-- CREATE IMAGE -->
+
+
+      <!-- FORUM IMAGES & CAPTIONS -->
       <div class="image-forum">
         <form ng-submit="ctrl.createImage()" class="image-create">
+
           <label for="image-create">Image URL</label>
             <input ng-model="ctrl.image" type="text" id="image-create">
+
           <label for="caption-create">Caption</label>
             <input ng-model="ctrl.caption" type="text" id="caption-create">
+
           <input type="submit" value="Post">
         </form>
+
+
         <!-- SHOW IMAGES -->
         <div ng-repeat="image in ctrl.images" class="image">
           <h3>{{image.caption}}</h3>
           <img ng-src="{{image.image}}" alt="{{image.caption}}">
-          <!-- DELETE IMAGE -->
+
+        <!-- DELETE IMAGE -->
           <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
-          <!-- EDIT IMAGE LINK -->
+
+        <!-- EDIT IMAGE LINK -->
           <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
-          <!-- EDIT IMAGE FORM -->
+
+        <!-- EDIT IMAGE FORM -->
           <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
             <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
             <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
