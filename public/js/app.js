@@ -11,6 +11,11 @@ app.controller('codeBreak', ['$http',function($http){
   this.showLogOut = false;
   this.showLogIn = true;
   this.showCreateUser = true;
+  this.formdata = {};
+
+  // =============
+  // JOKES
+  // =============
 
   this.getJoke = ()=>{
 
@@ -52,6 +57,11 @@ app.controller('codeBreak', ['$http',function($http){
  //
  // }
 // this.getJoke();
+
+  // =============
+  // USERS
+  // =============
+
   this.createUser = ()=>{
       $http(
           {
@@ -78,6 +88,9 @@ app.controller('codeBreak', ['$http',function($http){
 //     )then.((response)=>{console.log(response);}, (error)=>{console.log(error);})
 // }
 
+  // =============
+  // SESSIONS
+  // =============
 
   this.createSession = ()=>{
       $http(
@@ -111,5 +124,61 @@ app.controller('codeBreak', ['$http',function($http){
       }, (error)=>{error})
   }
 
+  // =============
+  // IMAGES
+  // =============
+
+  this.createImage = ()=>{
+    $http({
+      method: 'POST',
+      url: '/forums',
+      data: {
+        image: this.image,
+        caption: this.caption
+      }
+    }).then((response)=>{
+      console.log(resonse);
+    }, (error)=>{
+      console.log(error);
+    });
+  };
+
+  this.getImages = ()=>{
+    $http({
+      method: 'GET',
+      url: '/forums'
+    }).then((response)=>{
+      console.log(response);
+    }, (error)=>{
+      console.log(error);
+    });
+  };
+
+  this.editImage = (image)=>{
+    $http({
+      method: 'PUT',
+      url: '/forums/' + image._id,
+      data: {
+        image: this.updatedImage,
+        caption: this.updatedCaption
+      }
+    }).then((response)=>{
+      this.indexOfEditFormToShow = null;
+      this.getImages();
+    });
+  };
+
+  this.deleteImage = (image)=>{
+    $http({
+      method: 'DELETE',
+      url: '/forums/' + image._id
+    }).then((response)=>{
+      console.log(response);
+      this.getImages();
+    })
+  }
+
+  // reactivate once routes are up
+  // this.getImages();
 
 }])
