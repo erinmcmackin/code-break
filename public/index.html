@@ -44,9 +44,9 @@
       <div class="image-forum">
         <form ng-submit="ctrl.createImage()" class="image-create">
           <label for="image-create">Image URL</label>
-            <input type="text" id="image-create">
+            <input ng-model="ctrl.image" type="text" id="image-create">
           <label for="caption-create">Caption</label>
-            <input type="text" id="caption-create">
+            <input ng-model="ctrl.caption" type="text" id="caption-create">
           <input type="submit" value="Post">
         </form>
         <!-- SHOW IMAGES -->
