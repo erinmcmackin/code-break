@@ -32,6 +32,7 @@ app.controller('codeBreak', ['$http',function($http){
               console.log(response.data);
               console.log(response.data.setup);
               console.log(response.data.punchline);
+              this.showJoke = true;
               this.joke = response.data.setup;
               this.answer = response.data.punchline;
               this.showAnswer = false;
@@ -43,6 +44,7 @@ app.controller('codeBreak', ['$http',function($http){
 
    this.getAnswer =()=>{
       this.showAnswer=true;
+      this.showJoke = false;
    }
 
  // this.createJoke = ()=>{

@@ -1,0 +1,41 @@
+/* ============ */
+/* JOKES */
+/* ============ */
+
+.jokes {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.jokes-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.joke-setup {
+  align-items: left;
+  text-decoration: row;
+}
+
+.speech-bubble {
+  width: 400px;
+  height: 150px;
+  position: relative;
+}
+
+.joke-setup h4 {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 120px;
+  text-align: center;
+  z-index: 1;
+  width: 200px;
+}
+
+/* ============ */
+/* IMAGES */
+/* ============ */
+
+.image {
+  background-color: yellow;
+}
