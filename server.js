@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const Jokes = require('./models/jokes.js');
 const session = require('express-session');
+const Forums = require('./models/forums.js');
 
 // DEPENDENCIES
 app.use(express.json());
@@ -20,8 +21,13 @@ app.use('/jokes', jokesController);
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 
+const forumsController = require('./controllers/forums.js');
+app.use('/forums', forumsController);
+
+
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+
 
 app.get('/app', (req, res)=>{
   if(req.session.currentuser){
