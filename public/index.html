@@ -11,14 +11,18 @@
         <!-- {{2+2}}
         {{ctrl.test}} -->
       <form ng-if="ctrl.showCreateUser" ng-submit="ctrl.createUser()" class="create-user" >
-          UserName:  <input ng-model="ctrl.username" type="text" name="" value="">
-          Password: <input ng-model="ctrl.password" type="password" name="" value="">
+        <label for="username-create">Username</label>
+          <input ng-model="ctrl.username" type="text" id="username-create">
+        <label for="password-create">Password</label>
+          <input ng-model="ctrl.password" type="password" id="password-create">
           <button type="submit" name="button">CreateUser</button>
       </form>
 
       <form ng-if="ctrl.showLogIn" ng-submit="ctrl.createSession()" class="login" >
-          UserName:  <input ng-model="ctrl.username" type="text" name="" value="">
-          Password: <input ng-model="ctrl.password" type="password" name="" value="">
+        <label for="username-login">Username</label>
+          <input ng-model="ctrl.username" type="text" id="username-login">
+        <label for="password-login">Password</label>
+          <input ng-model="ctrl.password" type="password" id="password-login">
           <button type="submit" name="button">Log In</button>
       </form>
 
@@ -35,6 +39,27 @@
       <div class="">
         <button ng-click="ctrl.getAnswer()" >Show Answer</button>
         <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
+      </div>
+
+      <div class="image-forum">
+        <form ng-submit="ctrl.createImage()" class="image-create">
+          <label for="image-create">Image URL</label>
+            <input type="text" id="image-create">
+          <label for="caption-create">Caption</label>
+            <input type="text" id="caption-create">
+          <input type="submit" value="Post">
+        </form>
+        <div ng-repeat="image in ctrl.images" class="image">
+          <h3>{{ctrl.caption}}</h3>
+          <img ng-src="{{ctrl.image}}" alt="{{ctrl.caption}}">
+          <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+          <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+          <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
+            <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
+            <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
+            <input type="submit" value="Update">
+          </form>
+        </div>
       </div>
 
               <!-- <ul ng-repeat="user in ctrl.users">
