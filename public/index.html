@@ -51,8 +51,8 @@
         </form>
         <!-- SHOW IMAGES -->
         <div ng-repeat="image in ctrl.images" class="image">
-          <h3>{{ctrl.caption}}</h3>
-          <img ng-src="{{ctrl.image}}" alt="{{ctrl.caption}}">
+          <h3>{{image.caption}}</h3>
+          <img ng-src="{{image.image}}" alt="{{image.caption}}">
           <!-- DELETE IMAGE -->
           <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
           <!-- EDIT IMAGE LINK -->

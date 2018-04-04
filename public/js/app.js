@@ -12,6 +12,7 @@ app.controller('codeBreak', ['$http',function($http){
   this.showLogIn = true;
   this.showCreateUser = true;
   this.formdata = {};
+  this.indexOfEditFormToShow;
 
   // =============
   // JOKES
@@ -177,8 +178,8 @@ app.controller('codeBreak', ['$http',function($http){
     }).then((response)=>{
       console.log(response);
       this.getImages();
-    })
-  }
+    });
+  };
 
   // reactivate once routes are up
   this.getImages();

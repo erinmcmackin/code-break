@@ -25,7 +25,7 @@ router.post('/', (req, res)=>{
 })
 
 //put
-router.put('/', (req, res)=>{
+router.put('/:id', (req, res)=>{
     Forums.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, foundForum)=>{
         res.json(foundForum);
     })
@@ -33,20 +33,20 @@ router.put('/', (req, res)=>{
 })
 
 //delete
-router.get('/', (req, res)=>{
-    Forums.findByIdAndRemove(req.params.id, (err, deletedForums)=>{
+router.delete('/:id', (req, res)=>{
+    Forums.findByIdAndRemove(req.params.id, (err, deletedForum)=>{
         res.json(deletedForum);
     })
 
 })
 
 //show
-router.post('/:id', (req, res)=>{
-    Forums.findById(req.params.id, (err, foundForum)=>{
-        res.json(foundForum);
-    })
-
-})
+// router.get('/:id', (req, res)=>{
+//     Forums.findById(req.params.id, (err, foundForum)=>{
+//         res.json(foundForum);
+//     })
+//
+// })
 
 
 module.exports = router;
