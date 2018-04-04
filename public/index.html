@@ -40,7 +40,7 @@
         <button ng-click="ctrl.getAnswer()" >Show Answer</button>
         <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
       </div>
-
+      <!-- CREATE IMAGE -->
       <div class="image-forum">
         <form ng-submit="ctrl.createImage()" class="image-create">
           <label for="image-create">Image URL</label>
@@ -49,11 +49,15 @@
             <input type="text" id="caption-create">
           <input type="submit" value="Post">
         </form>
+        <!-- SHOW IMAGES -->
         <div ng-repeat="image in ctrl.images" class="image">
           <h3>{{ctrl.caption}}</h3>
           <img ng-src="{{ctrl.image}}" alt="{{ctrl.caption}}">
+          <!-- DELETE IMAGE -->
           <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+          <!-- EDIT IMAGE LINK -->
           <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+          <!-- EDIT IMAGE FORM -->
           <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
             <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
             <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">

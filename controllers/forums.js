@@ -19,7 +19,7 @@ router.get('/', (req, res)=>{
 //post
 router.post('/', (req, res)=>{
     Forums.create(req.body, (err, createdForum)=>{
-        res.json(creatdForum);
+        res.json(createdForum);
     })
 
 })

@@ -137,7 +137,8 @@ app.controller('codeBreak', ['$http',function($http){
         caption: this.caption
       }
     }).then((response)=>{
-      console.log(resonse);
+      console.log(response);
+      this.getImages();
     }, (error)=>{
       console.log(error);
     });
@@ -149,6 +150,7 @@ app.controller('codeBreak', ['$http',function($http){
       url: '/forums'
     }).then((response)=>{
       console.log(response);
+      this.images = response.data;
     }, (error)=>{
       console.log(error);
     });
@@ -179,6 +181,6 @@ app.controller('codeBreak', ['$http',function($http){
   }
 
   // reactivate once routes are up
-  // this.getImages();
+  this.getImages();
 
 }])
