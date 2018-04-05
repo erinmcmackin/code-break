@@ -25,6 +25,9 @@ app.controller('codeBreak', ['$http',function($http){
   this.formdata = {};
   this.indexOfEditFormToShow;
 
+  this.newQuery="test";
+  this.newLimit="2";
+
   this.includePath = 'partials/jokes.html'
   this.changeInclude = (path)=>{
       this.includePath = 'partials/'+path+'.html'
@@ -215,8 +218,10 @@ app.controller('codeBreak', ['$http',function($http){
         // this.tag = '&tag='+'programming';
         this.rating ='&rating='+'G';
         this.lang = '&lang='+'en'
+
         // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
         this.searchURL = this.hostURL+ this.path + this.apiKey +this.query+this.limit;
+
 
     $http(
         {   method:'GET',
@@ -225,11 +230,10 @@ app.controller('codeBreak', ['$http',function($http){
     ).then(
         (response)=>{
             this.gifys= response.data.data;
-            this.imgUrl =
-            console.log(response.data);
-            console.log(response.data.data);
-            console.log(response.data.data[0]);
-            console.log(response.data.data[0].embed_url);
+            // console.log(response.data);
+            // console.log(response.data.data);
+            // console.log(response.data.data[0]);
+            // console.log(response.data.data[0].embed_url);
         },
         (error)=>{error}
     )
