@@ -62,10 +62,10 @@ h1 {
   font-size: 20px;
   position: absolute;
   margin-top: 30px;
-  margin-left: 120px;
+  margin-left: 100px;
   text-align: center;
   z-index: 1;
-  width: 200px;
+  width: 250px;
 }
 
 .jokes-buttons-div {
@@ -93,16 +93,21 @@ h1 {
   /* background-color: yellow; */
   display: flex;
   /* flex-direction: row; */
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .image {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
   width: 300px;
   height: 300px;
+  border: 1px solid red;
 }
 
 .image h3 {
+  font-size: 30px;
   line-height: 0;
   padding: 0;
 }
@@ -113,6 +118,31 @@ h1 {
   width: 100%;
   height: 70%;
 }
+
+/* ============ */
+/* EDIT IMAGE MODAL */
+/* ============ */
+
+/* used w03d04 morning exercise for help */
+/* .edit-image-modal-bkgrd {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+.edit-image-modal {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  margin: 100px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+} */
 
 /* ============ */
 /* LABELS / INPUTS / BUTTONS */
