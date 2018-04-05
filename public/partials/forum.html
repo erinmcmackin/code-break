@@ -14,6 +14,7 @@
 
 
     <!-- SHOW IMAGES -->
+    <div class="image-gallery">
       <div ng-repeat="image in ctrl.images" class="image">
         <h3>{{image.caption}}</h3>
         <img ng-src="{{image.image}}" alt="{{image.caption}}">
@@ -31,4 +32,5 @@
           <input type="submit" value="Update">
         </form>
       </div>
+    </div>
     </div>
