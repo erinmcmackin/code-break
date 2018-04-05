@@ -202,4 +202,27 @@ app.controller('codeBreak', ['$http',function($http){
   // reactivate once routes are up
   this.getImages();
 
+
+  this.getGify = ()=>{
+        this.hostURL ='https://'+'api.giphy.com/';
+        this.path = 'v1/gifs/random?';
+        // 'v1/gifs/search';
+        this.apiKey= 'api_key='+'dhDVb2MRQfDuD2NOgb2f06brp8dfsRlw';
+        this.limit = '20';
+        this.tag = '&tag='+'computers';
+        this.rating ='&rating='+'G';
+        this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
+// http://api.giphy.com/v1/gifs/random?api_key=dhDVb2MRQfDuD2NOgb2f06brp8dfsRlw
+    $http(
+        {   method:'GET',
+            url: this.searchURL
+        }
+    ).then(
+        (response)=>{console.log(response.data);},
+        (error)=>{error}
+    )
+  };
+
+  this.getGify();
+
 }])
