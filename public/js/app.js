@@ -211,13 +211,13 @@ app.controller('codeBreak', ['$http',function($http){
         // this.path = 'v1/gifs/'+'random?';
         this.apiKey= 'api_key='+'dhDVb2MRQfDuD2NOgb2f06brp8dfsRlw';
         this.query = '&q='+'programming';
-        this.limit = '&limit='+'20';
+        this.limit = '&limit='+'24';
         // this.tag = '&tag='+'programming';
         this.rating ='&rating='+'G';
         this.lang = '&lang='+'en'
         // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
-        this.searchURL = this.hostURL+ this.path + this.apiKey +this.query;
-// http://api.giphy.com/v1/gifs/random?api_key=dhDVb2MRQfDuD2NOgb2f06brp8dfsRlw
+        this.searchURL = this.hostURL+ this.path + this.apiKey +this.query+this.limit;
+
     $http(
         {   method:'GET',
             url: this.searchURL
