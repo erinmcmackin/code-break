@@ -21,7 +21,7 @@ app.controller('codeBreak', ['$http',function($http){
   this.answer= "";
   this.showLogOut = false;
   this.showLogIn = true;
-  this.showCreateUser = true;
+  this.showRegister = true;
   this.formdata = {};
   this.indexOfEditFormToShow;
 
@@ -94,7 +94,7 @@ app.controller('codeBreak', ['$http',function($http){
       ).then((response)=>{
         console.log(response);
         this.showLogIn = true;
-        this.showCreateUser = false;
+        this.showRegister = false;
       }, (error)=>{error})
   }
 
@@ -124,7 +124,7 @@ app.controller('codeBreak', ['$http',function($http){
       ).then( (response)=>{
         console.log(response);
         this.showLogIn = false;
-        this.showCreateUser = false;
+        this.showRegister = false;
         this.showLogOut = true;
       },(error)=>{error})
   }
@@ -137,7 +137,7 @@ app.controller('codeBreak', ['$http',function($http){
           }
       ).then((response)=>{
         this.showLogIn = true;
-        this.showCreateUser = true;
+        this.showRegister = true;
         this.showLogOut = false;
         console.log(response);
       }, (error)=>{error})

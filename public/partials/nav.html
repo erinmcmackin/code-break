@@ -1,12 +1,13 @@
 <!--==== NAV=== -->
-<h5 ng-click="ctrl.changeInclude('')" >Home</h5>
-<h5 ng-click="ctrl.changeInclude('jokes')">Joke Generator</h5>
+<h5 ng-click="ctrl.changeInclude('jokes')" >Home</h5>
+<!-- <h5 ng-click="ctrl.changeInclude('jokes')">Joke Generator</h5> -->
 <h5 ng-click="ctrl.changeInclude('forum')">CodeBreak Forum</h5>
-<h5 ng-click="ctrl.changeInclude('laughwhileyoucry')">Laugh While You Cry Image</h5>
-<h5 ng-click="ctrl.changeInclude('login')">LogIn</h5>
-<h5 ng-click="ctrl.changeInclude('register')">Register</h5>
-<h5 ng-click="ctrl.changeInclude('logout')">LogOut</h5>
-<h5>TEST ALL</h5>
+<h5 ng-click="ctrl.changeInclude('laughwhileyoucry')">Laugh While You Cry Images</h5>
+<h5 ng-if="ctrl.showLogIn" ng-click="ctrl.changeInclude('login')">Login</h5>
+<h5 ng-if="ctrl.showRegister" ng-click="ctrl.changeInclude('register')">Register</h5>
+<!-- <h5 ng-if="ctrl.showLogOut" ng-click="ctrl.changeInclude('logout')">Logout</h5> -->
+<!-- don't need a separate page for logout, moving deleteSession to nav -->
+<h5 ng-if="ctrl.showLogOut" ng-click="ctrl.deleteSession()">Logout</h5>
 
 <!-- h5 href="/">Home</a>
 <a href="/jokes">Joke Generator</a>
