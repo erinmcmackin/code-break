@@ -1,6 +1,7 @@
 
       <!-- FORUM POSTS IMAGES & CAPTIONS -->
     <div class="image-forum">
+      <h2>Add Your Own Post!</h2>
       <form ng-submit="ctrl.createImage()" class="image-create">
 
         <label for="image-create">Image URL</label>
@@ -9,7 +10,8 @@
         <label for="caption-create">Caption</label>
           <input ng-model="ctrl.caption" type="text" id="caption-create">
 
-        <input type="submit" value="Post">
+        <!-- <input type="submit" value="Post"> -->
+        <button type="submit" name="button">Post</button>
       </form>
 
 

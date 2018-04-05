@@ -1,13 +1,21 @@
 <!--==== NAV=== -->
-<h5 ng-click="ctrl.changeInclude('jokes')" >Home</h5>
-<!-- <h5 ng-click="ctrl.changeInclude('jokes')">Joke Generator</h5> -->
-<h5 ng-click="ctrl.changeInclude('forum')">CodeBreak Forum</h5>
-<h5 ng-click="ctrl.changeInclude('laughwhileyoucry')">Laugh While You Cry Images</h5>
-<h5 ng-if="ctrl.showLogIn" ng-click="ctrl.changeInclude('login')">Login</h5>
-<h5 ng-if="ctrl.showRegister" ng-click="ctrl.changeInclude('register')">Register</h5>
-<!-- <h5 ng-if="ctrl.showLogOut" ng-click="ctrl.changeInclude('logout')">Logout</h5> -->
-<!-- don't need a separate page for logout, moving deleteSession to nav -->
-<h5 ng-if="ctrl.showLogOut" ng-click="ctrl.deleteSession()">Logout</h5>
+<ul class="nav-ul">
+  <li class="nav-li" ng-click="ctrl.changeInclude('jokes')" >Home</li>
+  <li class="pipe">|</li>
+  <!-- <li ng-click="ctrl.changeInclude('jokes')">Joke Generator</li> -->
+  <li class="nav-li" ng-click="ctrl.changeInclude('forum')">Forum</li>
+  <li class="pipe">|</li>
+  <li class="nav-li" ng-click="ctrl.changeInclude('laughwhileyoucry')">Laugh-While-You-Cry Images</li>
+  <li class="pipe" ng-if="ctrl.showLogIn">|</li>
+  <li class="nav-li" ng-if="ctrl.showLogIn" ng-click="ctrl.changeInclude('login')">Login</li>
+  <li class="pipe" ng-if="ctrl.showRegister">|</li>
+  <li class="nav-li" ng-if="ctrl.showRegister" ng-click="ctrl.changeInclude('register')">Register</li>
+  <!-- <li ng-if="ctrl.showLogOut" ng-click="ctrl.changeInclude('logout')">Logout</li> -->
+  <!-- don't need a separate page for logout, moving deleteSession to nav -->
+  <li class="pipe" ng-if="ctrl.showLogOut">|</li>
+  <li class="nav-li" ng-if="ctrl.showLogOut" ng-click="ctrl.deleteSession()">Logout</li>
+</ul>
+
 
 <!-- h5 href="/">Home</a>
 <a href="/jokes">Joke Generator</a>
