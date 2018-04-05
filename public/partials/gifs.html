@@ -1,5 +1,26 @@
 
+<!-- <form ng-submit=""  class="" > -->
+    <h2>Need More Pick-Me-Ups?</h2>
+{{ctrl.newQuery}}  {{ctrl.newLimit}}
+<!-- <form class=""> -->
+    Find New Laughs:<input  type="text" name=""  placeholder="Search for Funnies">
+    How Many Laughs Are You In Need Of? <input type="text" name="" placeholder="Hit Me With Your Best Shot (24)"><br/>
+    <button type="submit" name="button">Get Me Some Funnies!</button>
+<!-- </form> -->
 
-<div class="">
-    TESTING GIFS
+
+<div ng-repeat="gif in ctrl.gifys "class=""
+        style="
+        height:250px;
+        width:275px;
+        backgroud-repeat:no-repeat;
+        background-size: 100% 100%;
+        background-image:url('{{gif.images.preview_webp.url}}');"
+>
+<!-- comment out styling above and uncomment img below to get image view  -->
+    <!-- <img ng-src="{{gif.images.preview_webp.url}}" alt="test"> -->
+    <!-- <li>{{gif.images.preview_webp.url}}</li> -->
+
+
+
 </div>
