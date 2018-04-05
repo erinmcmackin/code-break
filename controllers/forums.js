@@ -4,9 +4,6 @@ const router = express.Router();
 const Forums = require('../models/forums.js');
 
 
-
-
-
 //Routes
 //index
 router.get('/', (req, res)=>{
@@ -15,6 +12,13 @@ router.get('/', (req, res)=>{
     })
 
 })
+
+// show image
+router.get('/:id', (req, res)=>{
+  Forums.findById((err, foundImage)=>{
+    res.json(foundImage);
+  });
+});
 
 //post
 router.post('/', (req, res)=>{
