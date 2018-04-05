@@ -10,96 +10,32 @@
     <body ng-controller='codeBreak as ctrl'>
       <h1>Code Break</h1>
 
+        <!-- NAV  -->
+        <nav ng-include="'./partials/nav.html' "> test</nav>
 
-  <!--==== USER INFO ====-->
-        <!-- CREATE USER  -->
-      <form ng-if="ctrl.showCreateUser" ng-submit="ctrl.createUser()" class="create-user" >
-        <label for="username-create">Username</label>
-            <input ng-model="ctrl.username" type="text" id="username-create">
 
-        <label for="password-create">Password</label>
-            <input ng-model="ctrl.password" type="password" id="password-create">
-        <button type="submit" name="button">CreateUser</button>
-      </form>
+        <!-- <div ng-include="ctrl.includePath"></div> -->
+        <div ng-include="ctrl.includePath"></div>
 
-        <!--LOGIN  -->
-      <form ng-if="ctrl.showLogIn" ng-submit="ctrl.createSession()" class="login" >
-        <label for="username-login">Username</label>
-          <input ng-model="ctrl.username" type="text" id="username-login">
 
-        <label for="password-login">Password</label>
-          <input ng-model="ctrl.password" type="password" id="password-login">
-        <button type="submit" name="button">Log In</button>
-      </form>
 
-      <!--LOGOUT  -->
-      <form ng-if="ctrl.showLogOut" ng-submit="ctrl.deleteSession()" class="logout">
-          <button type="submit" name="button">Log Out</button>
-      </form>
+<main  ng-view>
+
+</main>
+<!--==== USER INFO ====-->
+
+
 
 
 <!--==== JOKE GENERATOR  ====-->
 
-    <!--Get Jokes & Punchlines -->
-    <div class="jokes">
-      <div class="jokes-buttons">
-        <button ng-click="ctrl.getJoke()">I Need a JOKE!</button>
-        <button ng-click="ctrl.getAnswer()" >Show Answer</button>
-      </div>
-      <div class="joke-person">
-        <img src="https://camo.githubusercontent.com/fd2516798dfd7267b85bb93425a016bd7c33900d/687474703a2f2f692e696d6775722e636f6d2f57486e7541324f2e676966" alt="pusheen" />
-      </div>
-      <div class="joke-setup">
-        <h4 ng-if="ctrl.showJoke">{{ctrl.joke}}</h4>
-        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
-        <img class="speech-bubble" src="http://www.clker.com/cliparts/g/w/n/A/V/1/speech-bubble-hi.png" alt="speech-bubble">
-      </div>
-    </div>
 
-      <!-- FORUM IMAGES & CAPTIONS -->
-    <div class="image-forum">
-      <form ng-submit="ctrl.createImage()" class="image-create">
-
-        <label for="image-create">Image URL</label>
-          <input ng-model="ctrl.image" type="text" id="image-create">
-
-        <label for="caption-create">Caption</label>
-          <input ng-model="ctrl.caption" type="text" id="caption-create">
-
-        <input type="submit" value="Post">
-      </form>
+<!--==== FORUM  ====-->
 
 
-    <!-- SHOW IMAGES -->
-      <div ng-repeat="image in ctrl.images" class="image">
-        <h3>{{image.caption}}</h3>
-        <img ng-src="{{image.image}}" alt="{{image.caption}}">
 
-      <!-- DELETE IMAGE -->
-        <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+<!--==== GIFs ====-->
 
-      <!-- EDIT IMAGE LINK -->
-        <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
-
-      <!-- EDIT IMAGE FORM -->
-        <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
-          <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
-          <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
-          <input type="submit" value="Update">
-        </form>
-      </div>
-    </div>
-
-              <!-- <ul ng-repeat="user in ctrl.users">
-                  <li>{{user.username}}</li>
-                  <button ng-model=ctrl.deleteUser(user._id) type="submit" name="button">DeleteUser</button>
-
-              </ul> -->
-
-              <!-- <form ng-submit="" class="" action="index.html" method="post">
-                  Joke: <input ng-model="ctrl.joke" type="text" name="" value="" placeholder="Enter your joke">
-                  Punchline:<input ng-model="ctrl.answer" type="text" name="" value="" placeholder=" Enter your answer">
-              </form> -->
-
+<!-- FOOTER  -->
     </body>
 </html>

@@ -1,0 +1,34 @@
+
+      <!-- FORUM POSTS IMAGES & CAPTIONS -->
+    <div class="image-forum">
+      <form ng-submit="ctrl.createImage()" class="image-create">
+
+        <label for="image-create">Image URL</label>
+          <input ng-model="ctrl.image" type="text" id="image-create">
+
+        <label for="caption-create">Caption</label>
+          <input ng-model="ctrl.caption" type="text" id="caption-create">
+
+        <input type="submit" value="Post">
+      </form>
+
+
+    <!-- SHOW IMAGES -->
+      <div ng-repeat="image in ctrl.images" class="image">
+        <h3>{{image.caption}}</h3>
+        <img ng-src="{{image.image}}" alt="{{image.caption}}">
+
+      <!-- DELETE IMAGE -->
+        <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+
+      <!-- EDIT IMAGE LINK -->
+        <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+
+      <!-- EDIT IMAGE FORM -->
+        <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
+          <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
+          <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
+          <input type="submit" value="Update">
+        </form>
+      </div>
+    </div>

@@ -3,6 +3,17 @@ console.log("app.js is connected");
 //create module with name app.
 const app = angular.module('codeBreak', []);
 
+
+//'ngRoute'
+// app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
+//     $locationProvider.html5Mode({enabled:true});
+//     $routeProvider.when('/forums', {
+//         templateUrl: 'forums.html',
+//         controller:'codeBreak',
+//         controllerAs: 'ctrl'
+//     })
+// }])
+
 // Create controller: takes 2 parameters controllerName and and array. A function must be the last element in the array. call the angular $http module in the function & a variable for it
 app.controller('codeBreak', ['$http',function($http){
 
@@ -13,6 +24,11 @@ app.controller('codeBreak', ['$http',function($http){
   this.showCreateUser = true;
   this.formdata = {};
   this.indexOfEditFormToShow;
+
+  this.includePath = 'partials/jokes.html'
+  this.changeInclude = (path)=>{
+      this.includePath = 'partials/'+path+'.html'
+    }
 
   // =============
   // JOKES

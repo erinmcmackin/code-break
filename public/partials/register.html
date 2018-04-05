@@ -1,0 +1,9 @@
+<!-- CREATE USER  -->
+<form ng-if="ctrl.showCreateUser" ng-submit="ctrl.createUser()" class="create-user" >
+<label for="username-create">Username</label>
+    <input ng-model="ctrl.username" type="text" id="username-create">
+
+<label for="password-create">Password</label>
+    <input ng-model="ctrl.password" type="password" id="password-create">
+<button type="submit" name="button">CreateUser</button>
+</form>

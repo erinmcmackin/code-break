@@ -1,0 +1,14 @@
+<!--LOGIN  -->
+<form ng-if="ctrl.showLogIn" ng-submit="ctrl.createSession()" class="login" >
+<label for="username-login">Username</label>
+  <input ng-model="ctrl.username" type="text" id="username-login">
+
+<label for="password-login">Password</label>
+  <input ng-model="ctrl.password" type="password" id="password-login">
+<button type="submit" name="button">Log In</button>
+</form>
+
+<!--LOGOUT  -->
+<form ng-if="ctrl.showLogOut" ng-submit="ctrl.deleteSession()" class="logout">
+  <button type="submit" name="button">Log Out</button>
+</form>
