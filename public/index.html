@@ -5,37 +5,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="js/app.js" type="text/javascript"> </script>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
         <title></title>
     </head>
     <body ng-controller='codeBreak as ctrl'>
       <h1>Code Break</h1>
-
-        <!-- NAV  -->
-        <nav ng-include="'./partials/nav.html' "> test</nav>
-
-
-        <!-- <div ng-include="ctrl.includePath"></div> -->
-        <div ng-include="ctrl.includePath"></div>
-
-
-
-<main  ng-view>
-
-</main>
-<!--==== USER INFO ====-->
-
-
-
-
-<!--==== JOKE GENERATOR  ====-->
-
-
-<!--==== FORUM  ====-->
-
-
-
-<!--==== GIFs ====-->
-
-<!-- FOOTER  -->
+      <!-- NAV  -->
+      <nav ng-include="'./partials/nav.html' "></nav>
+      <!-- <div ng-include="ctrl.includePath"></div> -->
+      <div ng-include="ctrl.includePath"></div>
+      <main  ng-view>
+      </main>
     </body>
 </html>

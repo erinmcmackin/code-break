@@ -7,7 +7,12 @@ const bcrypt = require('bcrypt');
 // CREATE SESSION - LOG USER IN
 router.post('/', (req, res)=>{
   Users.findOne({username: req.body.username}, (err, foundUser)=>{
-    if(bcrypt.compareSync(req.body.password, foundUser.password)){
+    if(foundUser === null){
+      res.status(404).json({
+        status: 401,
+        message: 'user not found'
+      });
+    } else if (bcrypt.compareSync(req.body.password, foundUser.password)){
       req.session.currentuser = foundUser;
       res.status(201).json({
         status: 201,
