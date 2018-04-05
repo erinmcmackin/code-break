@@ -14,36 +14,41 @@
     <button type="submit" name="button">Post</button>
   </form>
 
-  <!-- SHOW IMAGES -->
+  <!-- SHOW IMAGES-->
   <div class="image-gallery">
     <div ng-repeat="image in ctrl.images" class="image">
       <h3>{{image.caption}}</h3>
-      <img ng-src="{{image.image}}" alt="{{image.caption}}">
+      <img ng-click="ctrl.openShowModal(image); ctrl.indexOfImageToShow = $index" ng-src="{{image.image}}" alt="{{image.caption}}">
+      <!-- IMAGE MODAL -->
+      <div ng-if="ctrl.indexOfImageToShow === $index" ng-click="ctrl.closeModal()" class="show-image-modal-bkgrd">
+        <div class="show-image-modal">
+          <h3>{{image.caption}}</h3>
+          <img ng-src="{{image.image}}" alt="{{image.caption}}">
+        </div>
+      </div>
 
     <!-- DELETE IMAGE -->
       <button ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
 
     <!-- EDIT IMAGE LINK -->
-      <button ng-click="ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+      <button ng-click="ctrl.openEditModal(image); ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
 
     <!-- EDIT IMAGE FORM -->
-      <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
+      <!-- <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
         <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
         <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
         <input type="submit" value="Update">
-      </form>
+      </form> -->
+      <!-- TESTING MODAL -->
+      <div ng-if="ctrl.indexOfEditFormToShow === $index" ng-click="ctrl.closeModal()" class="edit-image-modal-bkgrd">
+        <div class="edit-image-modal">
+          <form ng-submit="ctrl.editImage(image)" class="image-edit">
+            <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
+            <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
+            <input type="submit" value="Update">
+          </form>
+        </div>
+      </div>
     </div> <!-- closes image card -->
   </div>  <!-- closes image gallery -->
-
-  <!-- TESTING MODAL -->
-  <!-- <div ng-if="$index === ctrl.indexOfEditFormToShow" class="edit-image-modal-bkgrd">
-    <div class="edit-image-modal">
-      <form ng-submit="ctrl.editImage(image)" class="image-edit">
-        <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
-        <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
-        <input type="submit" value="Update">
-      </form>
-    </div>
-  </div> -->
-
 </div> <!-- closes image forum -->

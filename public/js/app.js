@@ -24,6 +24,9 @@ app.controller('codeBreak', ['$http',function($http){
   this.showRegister = true;
   this.formdata = {};
   this.indexOfEditFormToShow;
+  this.indexOfImageToShow;
+
+  this.showEditModal = false;
 
   this.newQuery="test";
   this.newLimit="2";
@@ -178,6 +181,29 @@ app.controller('codeBreak', ['$http',function($http){
     });
   };
 
+  this.openShowModal = (image)=>{
+    console.log('show modal');
+    $http({
+      method: 'GET',
+      url: '/forums/' + image._id
+    }).then((response)=>{
+      console.log(response);
+      this.image = response.data;
+    }, (error)=>{
+      console.log(error);
+    });
+  };
+
+  this.openEditModal = (image)=>{
+    console.log('open modal');
+    this.showEditModal = true;
+  };
+
+  this.closeModal = ()=>{
+    this.indexOfImageToShow = null;
+    this.indexOfEditFormToShow = null;
+  };
+
   this.editImage = (image)=>{
     $http({
       method: 'PUT',
@@ -187,6 +213,7 @@ app.controller('codeBreak', ['$http',function($http){
         caption: this.updatedCaption
       }
     }).then((response)=>{
+      this.showEditModal = false;
       this.indexOfEditFormToShow = null;
       this.getImages();
     });
