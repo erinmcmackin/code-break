@@ -40,12 +40,13 @@
         <input type="submit" value="Update">
       </form> -->
       <!-- TESTING MODAL -->
-      <div ng-if="ctrl.indexOfEditFormToShow === $index" ng-click="ctrl.closeModal()" class="edit-image-modal-bkgrd">
+      <div ng-if="ctrl.indexOfEditFormToShow === $index" class="edit-image-modal-bkgrd">
         <div class="edit-image-modal">
           <form ng-submit="ctrl.editImage(image)" class="image-edit">
             <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
             <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
-            <input type="submit" value="Update">
+            <button type="submit" name="button">Update</button>
+            <button ng-click="ctrl.closeModal()" type="button" name="button">Cancel</button>
           </form>
         </div>
       </div>
