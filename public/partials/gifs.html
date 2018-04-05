@@ -1,5 +1,9 @@
 
 
-<div class="">
-    TESTING GIFS
+<div ng-repeat="gif in ctrl.gifys "class="">
+    <li>{{gif.embed_url}}</li>
+    <img ng-src="{{gif.images.preview_webp.url}}" alt="test">
 </div>
+
+
+https://i.giphy.com/media/AKvygtGZzIDDUH5qT7/giphy.webp
