@@ -67,7 +67,6 @@ h1 {
   margin-top: 30px;
   margin-left: 100px;
   text-align: center;
-  z-index: 1;
   width: 250px;
 }
 
@@ -125,11 +124,11 @@ h1 {
 
 
 /* ============ */
-/* IMAGE MODALS */
+/* MODAL STANDARDS */
 /* ============ */
 
 /* used w03d04 morning exercise for help */
-.edit-image-modal-bkgrd, .show-image-modal-bkgrd {
+.edit-image-modal-bkgrd, .show-image-modal-bkgrd, .login-modal-background, .register-modal-bkgrd {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
@@ -141,7 +140,7 @@ h1 {
   /* display: none; */
 }
 
-.edit-image-modal, .show-image-modal {
+.edit-image-modal, .show-image-modal, .login-modal, .register-modal {
   background-color: white;
   height: 500px;
   width: 500px;
@@ -149,6 +148,10 @@ h1 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
+
+/* ============ */
+/* IMAGE MODALS */
+/* ============ */
 
 .show-image-modal {
   padding: 30px;
@@ -175,7 +178,33 @@ h1 {
   margin-top: 0;
 }
 
+/* ============ */
+/* REGISTER & LOGIN MODALs */
+/* ============ */
 
+.register-modal, .login-modal {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.register-modal input, .register-modal button, .login-modal input, .login-modal button {
+  font-size: 20px;
+  width: 400px;
+  margin: 5px;
+}
+
+.register-modal h3, .login-modal h3 {
+  font-size: 40px;
+  margin: 0 auto 5px;;
+}
+
+.register-modal p, .login-modal p {
+  font-size: 30px;
+  margin: 0;
+}
 
 /* ============ */
 /* LABELS / INPUTS / BUTTONS */

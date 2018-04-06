@@ -27,6 +27,8 @@ app.controller('codeBreak', ['$http',function($http){
   this.indexOfImageToShow;
 
   this.showEditModal = false;
+  this.showLoginModal = false;
+  this.showRegisterModal = false;
 
   this.newQuery="";
   this.newLimit="";
@@ -103,8 +105,17 @@ app.controller('codeBreak', ['$http',function($http){
         console.log(response);
         this.showLogIn = true;
         this.showRegister = false;
+        this.showRegisterModal = false;
       }, (error)=>{error})
   }
+
+  this.openRegisterModal = ()=>{
+    this.showRegisterModal = true;
+  };
+
+  this.closeRegisterModal = ()=>{
+    this.showRegisterModal = false;
+  };
 
 // this.deleteUser = (id)=>{
 //     $http(
@@ -134,6 +145,7 @@ app.controller('codeBreak', ['$http',function($http){
         this.showLogIn = false;
         this.showRegister = false;
         this.showLogOut = true;
+        this.showLoginModal = false;
       },(error)=>{error})
   }
 
@@ -150,6 +162,14 @@ app.controller('codeBreak', ['$http',function($http){
         console.log(response);
       }, (error)=>{error})
   }
+
+  this.openLoginModal = ()=>{
+    this.showLoginModal = true;
+  };
+
+  this.closeLoginModal = ()=>{
+    this.showLoginModal = false;
+  };
 
   // =============
   // IMAGES

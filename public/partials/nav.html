@@ -2,20 +2,46 @@
 <ul class="nav-ul">
   <li class="nav-li" ng-click="ctrl.changeInclude('jokes')" >Home</li>
   <li class="pipe">|</li>
-  <!-- <li ng-click="ctrl.changeInclude('jokes')">Joke Generator</li> -->
   <li class="nav-li" ng-click="ctrl.changeInclude('forum')">Forum</li>
   <li class="pipe">|</li>
   <li class="nav-li" ng-click="ctrl.changeInclude('gifs')">Laugh-While-You-Cry Images</li>
   <li class="pipe" ng-if="ctrl.showLogIn">|</li>
-  <li class="nav-li" ng-if="ctrl.showLogIn" ng-click="ctrl.changeInclude('login')">Login</li>
+  <li class="nav-li" ng-if="ctrl.showLogIn" ng-click="ctrl.openLoginModal()">Login</li>
   <li class="pipe" ng-if="ctrl.showRegister">|</li>
-  <li class="nav-li" ng-if="ctrl.showRegister" ng-click="ctrl.changeInclude('register')">Register</li>
-  <!-- <li ng-if="ctrl.showLogOut" ng-click="ctrl.changeInclude('logout')">Logout</li> -->
-  <!-- don't need a separate page for logout, moving deleteSession to nav -->
+  <li class="nav-li" ng-if="ctrl.showRegister" ng-click="ctrl.openRegisterModal()">Register</li>
   <li class="pipe" ng-if="ctrl.showLogOut">|</li>
   <li class="nav-li" ng-if="ctrl.showLogOut" ng-click="ctrl.deleteSession()">Logout</li>
 </ul>
 
+<!-- LOGIN MODAL -->
+<div ng-if="ctrl.showLoginModal" class="login-modal-background">
+  <div class="login-modal">
+    <form ng-submit="ctrl.createSession()" class="login" >
+      <h3>Log In</h3>
+      <p>Username</p>
+      <input ng-model="ctrl.username" type="text" id="username-login">
+      <p>Password</p>
+      <input ng-model="ctrl.password" type="password" id="password-login">
+      <button type="submit">Log In</button>
+      <button ng-click="ctrl.closeLoginModal()" type="button">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div ng-if="ctrl.showRegisterModal" class="register-modal-bkgrd">
+  <div class="register-modal">
+    <form ng-submit="ctrl.createUser()" class="create-user" >
+      <h3>Register</h3>
+      <p>Username</p>
+      <input ng-model="ctrl.username" type="text" id="username-create">
+      <p>Password</p>
+      <input ng-model="ctrl.password" type="password" id="password-create">
+      <button type="submit">Create User</button>
+      <button ng-click="ctrl.closeRegisterModal()" type="button">Cancel</button>
+    </form>
+  </div>
+</div>
 
 <!-- h5 href="/">Home</a>
 <a href="/jokes">Joke Generator</a>
