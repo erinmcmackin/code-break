@@ -1,0 +1,50 @@
+/* ========== */
+/* HOME PAGE */
+/* ===========*/
+
+    *{background-color: #b6ecde;
+      background-color: #88a6a7;
+    }
+
+    h1{color:black}
+
+    nav{
+        color: white;
+    }
+    button{
+        background-color:#bdbace;
+        background-color:#b37084;
+         color:white;
+    }
+
+    .jokes{
+
+        background-color: white;
+    }
+
+    /* ========== */
+    /* Forums & gifs */
+    /* ===========*/
+ 
+    .image{
+        /* background-color:#b37084; */
+                /* home color */
+
+        /* background-color:#dfb1b6; */
+                /* muted poink */
+
+        background-color:#f6deda;
+            /* pinkish */
+        border: 1px solid thistle;
+    }
+
+    img{background-color:#b37084;
+        background-color:#88a6a7;
+    }
+
+    .image-gallery,h2, form, label{background-color: #b6ecde }
+h3{color:cadetblue;
+    color:lightcoral;
+    color:firebrick;
+    color:#b37084;
+}
