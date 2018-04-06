@@ -111,7 +111,7 @@ h1 {
 
 .image h3 {
   font-size: 30px;
-  line-height: 0;
+  /* line-height: 0; */
   padding: 0;
 }
 
@@ -122,6 +122,12 @@ h1 {
   height: 70%;
 }
 
+.caption{
+    /* background-color: #b6ecde; */
+   margin-top: 0;
+   margin-bottom: 5px;
+   border-bottom:1px dotted #b37084;
+}
 
 /* ============ */
 /* MODAL STANDARDS */
