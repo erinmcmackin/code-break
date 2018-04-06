@@ -19,7 +19,8 @@
     <div ng-repeat="image in ctrl.images" class="image">
       <h3>{{image.caption}}</h3>
       <img ng-click="ctrl.openShowModal(image); ctrl.indexOfImageToShow = $index" ng-src="{{image.image}}" alt="{{image.caption}}">
-      <!-- IMAGE MODAL -->
+
+      <!-- SHOW IMAGE MODAL -->
       <div ng-if="ctrl.indexOfImageToShow === $index" ng-click="ctrl.closeModal()" class="show-image-modal-bkgrd">
         <div class="show-image-modal">
           <h3>{{image.caption}}</h3>
@@ -32,14 +33,7 @@
 
     <!-- EDIT IMAGE LINK -->
       <button ng-click="ctrl.openEditModal(image); ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
-
-    <!-- EDIT IMAGE FORM -->
-      <!-- <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editImage(image)" class="image-edit">
-        <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
-        <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
-        <input type="submit" value="Update">
-      </form> -->
-      <!-- TESTING MODAL -->
+      <!-- EDIT IMAGE MODAL -->
       <div ng-if="ctrl.indexOfEditFormToShow === $index" class="edit-image-modal-bkgrd">
         <div class="edit-image-modal">
           <form ng-submit="ctrl.editImage(image)" class="image-edit">
