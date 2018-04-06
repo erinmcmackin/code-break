@@ -67,7 +67,6 @@ h1 {
   margin-top: 30px;
   margin-left: 100px;
   text-align: center;
-  z-index: 1;
   width: 250px;
 }
 
@@ -179,7 +178,33 @@ h1 {
   margin-top: 0;
 }
 
+/* ============ */
+/* REGISTER & LOGIN MODALs */
+/* ============ */
 
+.register-modal, .login-modal {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.register-modal input, .register-modal button, .login-modal input, .login-modal button {
+  font-size: 20px;
+  width: 400px;
+  margin: 5px;
+}
+
+.register-modal h3, .login-modal h3 {
+  font-size: 40px;
+  margin: 0 auto 5px;;
+}
+
+.register-modal p, .login-modal p {
+  font-size: 30px;
+  margin: 0;
+}
 
 /* ============ */
 /* LABELS / INPUTS / BUTTONS */
