@@ -28,8 +28,10 @@ app.controller('codeBreak', ['$http',function($http){
 
   this.showEditModal = false;
 
-  this.newQuery="test";
-  this.newLimit="2";
+  this.newQuery="";
+  this.newLimit="";
+  this.query="";
+  this.limit="";
 
   this.includePath = 'partials/jokes.html'
   this.changeInclude = (path)=>{
@@ -235,20 +237,46 @@ app.controller('codeBreak', ['$http',function($http){
 // ============
 //   GIFYs
 // ============
+
+//takes user inputs for gify search query parameters and update gifies
+    this.changeQuery =()=>{
+
+          console.log(this.newQuery);
+          if(this.newQuery !=="" ){
+              this.query= '&q='+ this.newQuery;
+          }else{
+             this.query= '&q='+ 'programming';
+          }
+
+         console.log(this.query);
+
+          if(this.newLimit!==""){
+             this.limit= '&limit='+this.newLimit;
+          }else{
+             this.limit= '&limit='+'24';
+          }
+
+         console.log(this.limit);
+
+         this.getGify();
+    }
+
+
   this.getGify = ()=>{
+
+      //components of gify searchURL
         this.hostURL ='https://'+'api.giphy.com/';
         this.path = 'v1/gifs/'+'search?';
-        // this.path = 'v1/gifs/'+'random?';
         this.apiKey= 'api_key='+'dhDVb2MRQfDuD2NOgb2f06brp8dfsRlw';
-        this.query = '&q='+'programming';
-        this.limit = '&limit='+'24';
-        // this.tag = '&tag='+'programming';
         this.rating ='&rating='+'G';
         this.lang = '&lang='+'en'
-
-        // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
+            // this.query = '&q='+'programming';
+            // this.limit = '&limit='+'24';
+                // this.path = 'v1/gifs/'+'random?';
+            // this.tag = '&tag='+'programming';
+            // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
         this.searchURL = this.hostURL+ this.path + this.apiKey +this.query+this.limit;
-
+            console.log(this.searchURL);
 
     $http(
         {   method:'GET',
@@ -257,15 +285,13 @@ app.controller('codeBreak', ['$http',function($http){
     ).then(
         (response)=>{
             this.gifys= response.data.data;
-            // console.log(response.data);
-            // console.log(response.data.data);
             // console.log(response.data.data[0]);
-            // console.log(response.data.data[0].embed_url);
         },
         (error)=>{error}
     )
   };
 
+  this.changeQuery();
   this.getGify();
 
 }])
