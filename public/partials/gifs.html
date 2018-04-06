@@ -10,14 +10,16 @@
     <button type="submit" name="button">+</button>
 </form>
 
+->
+<div  ng-repeat="gif in ctrl.gifys" class="image">
+    <div  class="image"
+            style="
+            height:250px;
+            width:275px;
+            backgroud-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-image:url('{{gif.images.preview_webp.url}}');"
+    >
 
-<div ng-repeat="gif in ctrl.gifys "class=""
-        style="
-        height:250px;
-        width:275px;
-        backgroud-repeat:no-repeat;
-        background-size: 100% 100%;
-        background-image:url('{{gif.images.preview_webp.url}}');"
->
-
+    </div>
 </div>
