@@ -88,7 +88,7 @@ h1 {
 
 .image-forum h2 {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   font-size: 25px;
 }
 
@@ -122,12 +122,6 @@ h1 {
   height: 70%;
 }
 
-.caption{
-    /* background-color: #b6ecde; */
-   margin-top: 0;
-   margin-bottom: 5px;
-   border-bottom:1px dotted #b37084;
-}
 
 /* ============ */
 /* MODAL STANDARDS */

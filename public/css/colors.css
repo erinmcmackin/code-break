@@ -39,10 +39,8 @@ nav{
     /* Forums & gifs */
     /* ===========*/
 
-    h3{color:cadetblue;
-        color:lightcoral;
-        color:firebrick;
-        color:#b37084;
+    .image-create, .forum-header{padding-left: 15px;
+         padding-bottom: 15px;
     }
 
     .image{
@@ -54,7 +52,21 @@ nav{
 
         background-color:#f6deda;
             /* pinkish */
+            
         border: 1px solid thistle;
+    }
+
+    /* h3{color:cadetblue;
+        color:lightcoral;
+        color:firebrick;
+        color:#b37084;
+    } */
+    .caption{
+        /* background-color: #b6ecde; */
+       margin-top: 0;
+       margin-bottom: 5px;
+       border-bottom:1px dotted #b37084;
+       color:#b37084;
     }
 
     img{
