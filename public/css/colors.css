@@ -1,8 +1,21 @@
+
+/* ========== */
+/* All PAGES */
+/* ===========*/
+
+body{background-color: #88a6a7;
+
+}
+
+nav{
+    color: white;
+}
+
 /* ========== */
 /* HOME PAGE */
 /* ===========*/
 
-    *{background-color: #b6ecde;
+    /* *{background-color: #b6ecde;
       background-color: #88a6a7;
     }
 
@@ -20,12 +33,13 @@
     .jokes{
 
         background-color: white;
-    }
+    } */
 
     /* ========== */
     /* Forums & gifs */
     /* ===========*/
- 
+
+
     .image{
         /* background-color:#b37084; */
                 /* home color */
@@ -38,8 +52,8 @@
         border: 1px solid thistle;
     }
 
-    img{background-color:#b37084;
-        background-color:#88a6a7;
+    img{
+        /* background-color:#88a6a7; */
     }
 
     .image-gallery,h2, form, label{background-color: #b6ecde }
