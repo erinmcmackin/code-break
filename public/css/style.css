@@ -207,6 +207,31 @@ h1 {
 }
 
 /* ============ */
+/* GIFS */
+/* ============ */
+
+.gif-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif {
+  padding: 0;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.gif img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+/* ============ */
 /* LABELS / INPUTS / BUTTONS */
 /* ============ */
 
