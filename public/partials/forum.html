@@ -43,6 +43,7 @@
       <div ng-if="ctrl.indexOfEditFormToShow === $index" class="edit-image-modal-bkgrd">
         <div class="edit-image-modal">
           <form ng-submit="ctrl.editImage(image)" class="image-edit">
+            <h3>Edit Post</h3>
             <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
             <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
             <button type="submit" name="button">Update</button>
