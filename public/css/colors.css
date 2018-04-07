@@ -41,28 +41,28 @@ nav{color: white;}
 
 /* option2 */
     nav{margin-right: 5%;}
-    .image-gallery,.forum-form,label{background-color: white;}
-    .forum-header{background-color: #b3cdc6;}
+    .image-gallery,.forum-form, .forum-lbl, .gif-lbl,.gif-form{background-color: white;}
+    .forum-header, .gif-header{background-color: #b3cdc6;}
      /* #cdeae2
      #cae3dc
     #b3cdc6 */
 
     /*--FORM & HEADER--*/
-    .forum-form, .forum-header, .image-gallery{
+    .forum-form, .forum-header, .image-gallery, .gif-form, .gif-header{
          padding-left: 15px;
          padding-bottom: 10px;
          margin: 0% 5%;
     }
 
     .image-gallery{
-        padding: 0;;
+        padding-top: 20px;
     }
 
-    .forum-header{
+    .forum-header, .gif-header{
         padding-bottom:0px;
 
     }
-    .forum-form{
+    .forum-form, .gif-form{
         margin-bottom: 15px;
     }
 
