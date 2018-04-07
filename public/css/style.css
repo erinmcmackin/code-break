@@ -1,0 +1,240 @@
+* {
+  font-family: 'Hi Melody', cursive;
+}
+
+
+/* ============ */
+/* HEADER */
+/* ============ */
+
+h1 {
+  font-size: 50px;
+  line-height: 1;
+  padding: 0;
+  margin: 0 10px;
+}
+
+
+/* ============ */
+/* NAV */
+/* ============ */
+
+.nav-ul {
+  list-style: none;
+  font-size: 25px;
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: flex-end;
+  text-transform: uppercase;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.nav-li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.pipe {
+  color: lightgray;
+}
+
+.nav-li:hover {
+  color: thistle;
+  cursor: pointer;
+}
+
+
+/* ============ */
+/* JOKES */
+/* ============ */
+
+.jokes {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}
+
+.speech-bubble {
+  width: 400px;
+  height: 150px;
+  position: relative;
+}
+
+.joke-setup h4 {
+  font-size: 20px;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 100px;
+  text-align: center;
+  width: 250px;
+}
+
+.jokes-buttons-div {
+  display: flex;
+}
+
+.joke-button {
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  padding: 0 15px;
+}
+
+
+/* ============ */
+/* IMAGES FORUM */
+/* ============ */
+
+.image-forum h2 {
+  /* margin: 0; */
+  /* padding: 0; */
+  font-size: 25px;
+}
+
+.image-gallery {
+  /* background-color: yellow; */
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.image h3 {
+  font-size: 30px;
+  /* line-height: 0; */
+  padding: 0;
+}
+
+.image img {
+  width: 300px;
+  object-fit: contain;
+  width: 100%;
+  height: 70%;
+}
+
+
+/* ============ */
+/* MODAL STANDARDS */
+/* ============ */
+
+/* used w03d04 morning exercise for help */
+.edit-image-modal-bkgrd, .show-image-modal-bkgrd, .login-modal-background, .register-modal-bkgrd {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  /* display: none; */
+}
+
+.edit-image-modal, .show-image-modal, .login-modal, .register-modal {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  margin: 150px auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+/* ============ */
+/* IMAGE MODALS */
+/* ============ */
+
+.show-image-modal {
+  padding: 30px;
+}
+
+.show-image-modal h3 {
+  font-size: 40px;
+}
+
+.edit-image-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edit-image-modal input, .edit-image-modal button {
+  font-size: 20px;
+  width: 400px;
+  margin: 5px;
+}
+
+.edit-image-modal h3 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+/* ============ */
+/* REGISTER & LOGIN MODALs */
+/* ============ */
+
+.register-modal, .login-modal {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.register-modal input, .register-modal button, .login-modal input, .login-modal button {
+  font-size: 20px;
+  width: 400px;
+  margin: 5px;
+}
+
+.register-modal h3, .login-modal h3 {
+  font-size: 40px;
+  margin: 0 auto 5px;;
+}
+
+.register-modal p, .login-modal p {
+  font-size: 30px;
+  margin: 0;
+}
+
+/* ============ */
+/* GIFS */
+/* ============ */
+
+.gif-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif {
+  padding: 0;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.gif img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+/* ============ */
+/* LABELS / INPUTS / BUTTONS */
+/* ============ */
+
+label {
+  font-size: 20px;
+}

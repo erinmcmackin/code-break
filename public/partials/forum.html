@@ -1,0 +1,50 @@
+<!-- FORUM POSTS IMAGES & CAPTIONS -->
+<div class="image-forum">
+
+  <h2 class="forum-header">Add Your Own Post!</h2>
+  <form ng-submit="ctrl.createImage()" class="image-create forum-form">
+
+    <label class="forum-lbl" for="image-create">Image URL</label>
+      <input ng-model="ctrl.image" type="text" id="image-create">
+
+    <label class="forum-lbl" for="caption-create">Caption</label>
+      <input ng-model="ctrl.caption" type="text" id="caption-create">
+
+    <!-- <input type="submit" value="Post"> -->
+    <button class="form-btn" type="submit" name="button">Post</button>
+  </form>
+
+  <!-- SHOW IMAGES-->
+  <div class="image-gallery">
+    <div ng-repeat="image in ctrl.images" class="image">
+      <h3 class="caption">{{image.caption}}</h3>
+      <img  ng-click="ctrl.openShowModal(image); ctrl.indexOfImageToShow = $index" ng-src="{{image.image}}" alt="{{image.caption}}">
+
+      <!-- SHOW IMAGE MODAL -->
+      <div ng-if="ctrl.indexOfImageToShow === $index" ng-click="ctrl.closeModal()" class="show-image-modal-bkgrd">
+        <div class="show-image-modal">
+          <h3>{{image.caption}}</h3>
+          <img ng-src="{{image.image}}" alt="{{image.caption}}">
+        </div>
+      </div>
+
+    <!-- DELETE IMAGE -->
+      <button class="forum-btn" ng-click="ctrl.deleteImage(image)" type="button" name="button">Delete</button>
+
+    <!-- EDIT IMAGE LINK -->
+      <button class="forum-btn" ng-click="ctrl.openEditModal(image); ctrl.indexOfEditFormToShow = $index" type="button" name="button">Edit</button>
+      <!-- EDIT IMAGE MODAL -->
+      <div ng-if="ctrl.indexOfEditFormToShow === $index" class="edit-image-modal-bkgrd">
+        <div class="edit-image-modal">
+          <form ng-submit="ctrl.editImage(image)" class="image-edit">
+            <h3>Edit Post</h3>
+            <input ng-model="ctrl.updatedCaption" type="text" value="{{image.caption}}" placeholder="{{image.caption}}">
+            <input ng-model="ctrl.updatedImage" type="text" value="{{iamge.image}}" placeholder="{{image.image}}">
+            <button type="submit" name="button">Update</button>
+            <button ng-click="ctrl.closeModal()" type="button" name="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div> <!-- closes image card -->
+  </div>  <!-- closes image gallery -->
+</div> <!-- closes image forum -->

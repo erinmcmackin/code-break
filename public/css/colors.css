@@ -1,0 +1,146 @@
+
+/* ========== */
+/* All PAGES */
+/* ===========*/
+
+body{background-color: #b6ecde;
+    /* background-color: #88a6a7; */
+}
+
+nav{color: black;}
+
+
+
+
+/* ========== */
+/* HOME PAGE */
+/* ===========*/
+
+.joke-button{
+    background-color:#b37084;
+     color:white;
+}
+
+    /* *{background-color: #b6ecde;
+      background-color: #88a6a7;
+    }
+
+    h1{color:black}
+
+    nav{
+        color: white;
+    }
+
+    .jokes{
+
+        background-color: white;
+    } */
+
+    /* ========== */
+    /* Forums & gifs */
+    /* ===========*/
+
+    /*-- CONTAINER-- */
+    /* .image-gallery,h2, form, label{background-color: #b6ecde } */
+
+/* option2 */
+    nav{margin-right: 5%;}
+    .image-gallery,.forum-form, .forum-lbl, .gif-lbl,.gif-form{background-color: white;}
+    .forum-header, .gif-header{background-color: #b3cdc6;}
+     /* #cdeae2
+     #cae3dc
+    #b3cdc6 */
+
+    /*--FORM & HEADER--*/
+    .forum-form, .forum-header, .image-gallery, .gif-form, .gif-header{
+         padding-left: 15px;
+         padding-bottom: 10px;
+         margin: 0% 5%;
+    }
+
+    .image-gallery{
+        padding-top: 20px;
+    }
+
+    .forum-header, .gif-header{
+        padding-bottom:0px;
+
+    }
+    .forum-form, .gif-form{
+        margin-bottom: 15px;
+    }
+
+
+
+    .image{
+        /* background-color:#b37084; */
+                /* home color */
+
+        /* background-color:#dfb1b6; */
+                /* muted poink */
+
+        /* background-color:#f6deda; */
+            /* pinkish */
+
+        border: 1px solid silver;
+    }
+
+    /* h3{color:cadetblue;
+        color:lightcoral;
+        color:firebrick;
+        color:#b37084;
+    } */
+
+
+    .caption{
+        /* background-color: #b6ecde; */
+       margin-top: 0;
+       margin-bottom: 5px;
+       border-bottom:1px dotted #b37084;
+       color:gray;
+    }
+
+
+    .form-btn{
+        background-color:#b37084;
+        color:white;
+
+    }
+
+    .forum-btn{
+        background-color:;
+        opacity: .7;
+        color:white;
+
+}
+/*=======  */
+/* MODALS */
+/*========  */
+
+ /* .login-modal, .register-modal,  */
+ .login, .create-user{ background-color: #b6ecde;
+     padding-bottom: 70px;
+    }
+  .modal-header{color:#b37084}
+/*=======  */
+/* FOOTER  */
+/*========  */
+    footer{
+        display: inline-block;
+        width: 100%;
+        background-color: #b3cdc6;
+        margin: 0;
+    }
+
+    .footer1 > p {
+         margin: 0;
+    }
+
+    .footer1{ float:left;
+    margin-left: 5%;}
+    .footer2 > img {
+        height: 50px;
+        padding: 15%;
+    }
+    .footer2{float:right;
+    margin-right: 5%;}

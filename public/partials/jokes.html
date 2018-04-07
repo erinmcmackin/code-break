@@ -1,0 +1,16 @@
+
+    <!--Get Jokes & Punchlines -->
+    <div class="jokes-buttons-div">
+      <button class="joke-button" ng-click="ctrl.getJoke()">I Need A JOKE!</button>
+      <button class="joke-button" ng-click="ctrl.getAnswer()">Hit Me With The Punchline!</button>
+    </div>
+    <div class="jokes">
+      <div class="joke-person">
+        <img src="https://camo.githubusercontent.com/fd2516798dfd7267b85bb93425a016bd7c33900d/687474703a2f2f692e696d6775722e636f6d2f57486e7541324f2e676966" alt="pusheen" />
+      </div>
+      <div class="joke-setup">
+        <h4 ng-if="ctrl.showJoke">{{ctrl.joke}}</h4>
+        <h4 ng-if="ctrl.showAnswer" >{{ctrl.answer}}</h4>
+        <img class="speech-bubble" src="http://www.clker.com/cliparts/g/w/n/A/V/1/speech-bubble-hi.png" alt="speech-bubble">
+      </div>
+    </div>

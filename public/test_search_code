@@ -1,0 +1,20 @@
+
+
+
+
+//this code allows the query and limit of the gify search parameters to be changed.
+console.log(this.query);
+console.log(this.newQuery);
+
+console.log(this.limit);
+console.log(this.newLimit);
+
+if(this.newQuery !=="" ){
+    this.query= '&q='+ this.newQuery
+};
+
+console.log(this.query);
+console.log(this.newQuery);
+if(this.newLimit!==""){
+    this.limit= '&limit='+this.newLimit
+};
