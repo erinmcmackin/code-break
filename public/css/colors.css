@@ -8,6 +8,13 @@ body{background-color: #88a6a7;
 
 nav{color: white;}
 
+
+.joke-button{
+    background-color:#b37084;
+     color:white;
+}
+
+
 /* ========== */
 /* HOME PAGE */
 /* ===========*/
@@ -20,11 +27,6 @@ nav{color: white;}
 
     nav{
         color: white;
-    }
-    button{
-        background-color:#bdbace;
-        background-color:#b37084;
-         color:white;
     }
 
     .jokes{
@@ -109,9 +111,17 @@ nav{color: white;}
         color:white;
 
 }
-
 /*=======  */
-/* FOOTER */
+/* MODALS */
+/*========  */
+
+ /* .login-modal, .register-modal,  */
+ .login, .create-user{ background-color: #b6ecde;
+     padding-bottom: 70px;
+    }
+  .modal-header{color:#b37084}
+/*=======  */
+/* FOOTER  */
 /*========  */
     footer{
         display: inline-block;

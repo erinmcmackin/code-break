@@ -1,0 +1,30 @@
+
+<!-- LOGIN MODAL -->
+<div ng-if="ctrl.showLoginModal" class="login-modal-background">
+  <div class="login-modal">
+    <form ng-submit="ctrl.createSession()" class="login" >
+      <h3 class="modal-header" >Log In</h3>
+      <p>Username</p>
+      <input ng-model="ctrl.username" type="text" id="username-login">
+      <p>Password</p>
+      <input ng-model="ctrl.password" type="password" id="password-login">
+      <button type="submit">Log In</button>
+      <button ng-click="ctrl.closeLoginModal()" type="button">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div ng-if="ctrl.showRegisterModal" class="register-modal-bkgrd">
+  <div class="register-modal">
+    <form ng-submit="ctrl.createUser()" class="create-user" >
+      <h3 class="modal-header">Register</h3>
+      <p>Username</p>
+      <input ng-model="ctrl.username" type="text" id="username-create">
+      <p>Password</p>
+      <input ng-model="ctrl.password" type="password" id="password-create">
+      <button type="submit">Create User</button>
+      <button ng-click="ctrl.closeRegisterModal()" type="button">Cancel</button>
+    </form>
+  </div>
+</div>
