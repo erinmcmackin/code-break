@@ -1,10 +1,10 @@
 <!--==== NAV=== -->
 <ul class="nav-ul">
-  <li class="nav-li" ng-click="ctrl.changeInclude('jokes')" >Home</li>
+  <li class="nav-li" ng-click="ctrl.changeInclude('jokes'); ctrl.chgColor_Home()" >Home</li>
   <li class="pipe">|</li>
-  <li class="nav-li" ng-click="ctrl.changeInclude('forum')">Forum</li>
+  <li class="nav-li" ng-click="ctrl.changeInclude('forum'); ctrl.chgColor_Other()">Forum</li>
   <li class="pipe">|</li>
-  <li class="nav-li" ng-click="ctrl.changeInclude('gifs')">Laugh-While-You-Cry Images</li>
+  <li class="nav-li" ng-click="ctrl.changeInclude('gifs'); ctrl.chgColor_Other()">Laugh-While-You-Cry Images</li>
   <li class="pipe" ng-if="ctrl.showLogIn">|</li>
   <li class="nav-li" ng-if="ctrl.showLogIn" ng-click="ctrl.openLoginModal()">Login</li>
   <li class="pipe" ng-if="ctrl.showRegister">|</li>

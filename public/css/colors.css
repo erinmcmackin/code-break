@@ -3,21 +3,23 @@
 /* All PAGES */
 /* ===========*/
 
-body{background-color: #88a6a7;
+body{background-color: #b6ecde;
+    /* background-color: #88a6a7; */
 }
 
-nav{color: white;}
+nav{color: black;}
 
 
-.joke-button{
-    background-color:#b37084;
-     color:white;
-}
 
 
 /* ========== */
 /* HOME PAGE */
 /* ===========*/
+
+.joke-button{
+    background-color:#b37084;
+     color:white;
+}
 
     /* *{background-color: #b6ecde;
       background-color: #88a6a7;
