@@ -104,8 +104,31 @@ nav{color: white;}
     }
 
     .forum-btn{
-        background-color:#b37084;
+        background-color:;
         opacity: .7;
         color:white;
 
 }
+
+/*=======  */
+/* FOOTER */
+/*========  */
+    footer{
+        display: inline-block;
+        width: 100%;
+        background-color: #b3cdc6;
+        margin: 0;
+    }
+
+    .footer1 > p {
+         margin: 0;
+    }
+
+    .footer1{ float:left;
+    margin-left: 5%;}
+    .footer2 > img {
+        height: 50px;
+        padding: 15%;
+    }
+    .footer2{float:right;
+    margin-right: 5%;}
