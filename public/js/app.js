@@ -23,10 +23,9 @@ app.controller('codeBreak', ['$http',function($http){
   this.showLogIn = true;
   this.showRegister = true;
   this.formdata = {};
-  this.indexOfEditFormToShow;
-  this.indexOfImageToShow;
+  this.indexOfEditFormToShow = null;
+  this.indexOfImageToShow = null;
 
-  this.showEditModal = false;
   this.showLoginModal = false;
   this.showRegisterModal = false;
 
@@ -231,14 +230,12 @@ app.controller('codeBreak', ['$http',function($http){
     });
   };
 
-  this.openEditModal = (image)=>{
-    console.log('open modal');
-    this.showEditModal = true;
-  };
-
   this.closeModal = ()=>{
     this.indexOfImageToShow = null;
     this.indexOfEditFormToShow = null;
+    // clearing data so it doesn't appear when you go to edit another image
+    this.updatedImage = '';
+    this.updatedCaption = '';
   };
 
   this.editImage = (image)=>{
@@ -250,8 +247,10 @@ app.controller('codeBreak', ['$http',function($http){
         caption: this.updatedCaption
       }
     }).then((response)=>{
-      this.showEditModal = false;
       this.indexOfEditFormToShow = null;
+      // clearing data so it doesn't appear when you go to edit another image
+      this.updatedImage = '';
+      this.updatedCaption = '';
       this.getImages();
     });
   };
