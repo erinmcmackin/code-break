@@ -1,17 +1,17 @@
 
 <!-- <form ng-submit=""  class="" > -->
-    <h2>Need More Pick-Me-Ups?</h2>
+    <h2 class="gif-header">Need More Pick-Me-Ups?</h2>
 
-<form ng-submit="ctrl.changeQuery()" class="">
-  <label for="search">Find New Laughs:</label>
+<form ng-submit="ctrl.changeQuery()" class="gif-form">
+  <label class="gif-lbl" for="search">Find New Laughs:</label>
     <input  ng-model="ctrl.newQuery" type="text" name="search"  placeholder="Search for Funnies" >
-  <label for="number">How Many Laughs Do You Need? </label>
+  <label class="gif-lbl" for="number">How Many Laughs Do You Need? </label>
     <input ng-model="ctrl.newLimit" type="text" name="number" placeholder="Hit Me With Your Best Shot (24)">
 
-    <button type="submit" name="button">+</button>
+    <button class="form-btn" type="submit" name="button">Get Me Funnies!</button>
 </form>
 
-  <div class="gif-container">
+  <div class="gif-containers image-gallery">
     <div ng-repeat="gif in ctrl.gifys" class="gif">
       <img ng-src="{{gif.images.preview_webp.url}}" >
     </div>

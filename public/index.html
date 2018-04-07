@@ -9,12 +9,18 @@
         <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
         <title></title>
     </head>
-    <body ng-controller='codeBreak as ctrl'>
+    <body ng-controller='codeBreak as ctrl' style="background-color: {{ctrl.bodyColor}};">
       <h1>Code Break</h1>
       <!-- NAV  -->
-      <nav ng-include="'./partials/nav.html' "></nav>
-      <!-- <div ng-include="ctrl.includePath"></div> -->
+      <nav ng-include="'./partials/nav.html' " style="color:{{ctrl.navColor}}"></nav>
+      <!--MODALS-->
+      <div ng-include=" './partials/modals.html'"></div>
+       <!--MAIN  -->
       <div ng-include="ctrl.includePath"></div>
+        <!-- FOOTER  -->
+      <footer>
+          <div ng-include="'./partials/footer.html' "><div>
+      </footer>
       <main  ng-view>
       </main>
     </body>

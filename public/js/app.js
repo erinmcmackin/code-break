@@ -40,6 +40,21 @@ app.controller('codeBreak', ['$http',function($http){
       this.includePath = 'partials/'+path+'.html'
     }
 
+    // =============
+    // Body Color
+    // =============
+
+    this.chgColor_Home = ()=>{
+        this.bodyColor='#b6ecde';
+        this.navColor = '#000000';
+    }
+
+    this.chgColor_Other = ()=>{
+        this.bodyColor='#88a6a7';
+        this.navColor ='#FFFFFF';
+    }
+
+
   // =============
   // JOKES
   // =============
