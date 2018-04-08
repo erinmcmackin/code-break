@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const Jokes = require('./models/jokes.js');
 const session = require('express-session');
 const Forums = require('./models/forums.js');
+const mongoUri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
+const port = process.env.PORT || 3000;
+
 
 // DEPENDENCIES
 app.use(express.json());
@@ -42,12 +45,17 @@ app.get('/app', (req, res)=>{
 
 
 mongoose.connect('mongodb://localhost:27017/jokes');
+mongoose.connect(mongoUri);
 
 mongoose.connection.on('open', ()=>{
   console.log('connected to mongoose');
 });
 
+// app.listen(3000, ()=>{
+//   console.log('I\'m listening...');
+// });
 
-app.listen(3000, ()=>{
-  console.log('I\'m listening...');
-});
+app.listen(port);
+console.log('---------------------------------');
+console.log('Server running on port: ' + port);
+console.log('---------------------------------');
