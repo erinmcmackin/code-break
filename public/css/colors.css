@@ -29,12 +29,12 @@ nav{color: black;}
 
     nav{
         color: white;
-    }
+    }*/
 
     .jokes{
 
         background-color: white;
-    } */
+    }
 
     /* ========== */
     /* Forums & gifs */
@@ -108,9 +108,8 @@ nav{color: black;}
     }
 
     .forum-btn{
-        background-color:;
-        opacity: .7;
-        color:white;
+        background-color: #b37084;
+        color: white;
 
 }
 /*=======  */
@@ -126,21 +125,5 @@ nav{color: black;}
 /* FOOTER  */
 /*========  */
     footer{
-        display: inline-block;
-        width: 100%;
         background-color: #b3cdc6;
-        margin: 0;
     }
-
-    .footer1 > p {
-         margin: 0;
-    }
-
-    .footer1{ float:left;
-    margin-left: 5%;}
-    .footer2 > img {
-        height: 50px;
-        padding: 15%;
-    }
-    .footer2{float:right;
-    margin-right: 5%;}
