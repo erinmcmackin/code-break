@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/colors.css">
         <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <title></title>
     </head>
     <body ng-controller='codeBreak as ctrl' style="background-color: {{ctrl.bodyColor}};">
@@ -17,11 +18,8 @@
       <div ng-include=" './partials/modals.html'"></div>
        <!--MAIN  -->
       <div ng-include="ctrl.includePath"></div>
-        <!-- FOOTER  -->
-      <footer>
-          <div ng-include="'./partials/footer.html' "><div>
-      </footer>
-      <main  ng-view>
-      </main>
-    </body>
+    </body>        <!-- FOOTER  -->
+    <footer>
+        <div ng-include="'./partials/footer.html' "><div>
+    </footer>
 </html>
