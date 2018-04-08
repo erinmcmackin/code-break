@@ -1,7 +1,7 @@
 # Code-Break: A GA Project
  By: Erin McMackin & Teilachanell
 
-![alt Text] (https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif "Logo Title Text 1")
+![] (https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif "Logo Title Text 1")
 
 ![alt Text]https://www.amazing-animations.com/animations/computers4.gif "Logo Title Text 2")
 
@@ -18,23 +18,24 @@ Code-Break: Fun site for programmers to take a break from frustrating code!
 
 * The user is in stitches. Spirits lifted, and life's essence restored the user found just they boost they needed by taking a code-break! But one more thing, the user might need to return one day, and would like like to see some variety. Let's add a user LogIn capability and a search bar to the gifs gallery so that the user can find new gifs. Remember, some may need more than others so lets let them pick how many.
 
-* The user is all set to return the next time they need a Code-Break 
+* The user is all set to return the next time they need a Code-Break
 
 
 ## Vision Site Structure & Content
-
- - Programming jokes
+  * Programming jokes
     - Random joke generator
 
--Forums
-   - post an image with a caption
-   - leave a comment
+  * Forums
+   - Post an image with a caption
+   - Leave a comment
 
--Funny GIFs and comics
+ * Funny GIFs and comics
+   - Stretch goal
 
 ## Languages & Frameworks Used
   * Javascript
-  * HTML & CSS & Flexbox
+  * HTML & CSS & FlexBox
+
 MeanStack:
   * Mongoose
   * Express
@@ -45,19 +46,19 @@ MeanStack:
 ## Technical Highlights
   * Single Page site
   * 1 Full Crud Model w/Restful Routes
-  * 2 3rd party API's (1 random, 1 searchable), and a custom API.
+  * 2 3rd party API's (1 random, 1 searchable), and a custom API
   * LogIn & Authentication
   * Modals
   * Partials
   * Javascript dependent CSS
 
 
-
-## Technical CHALLENGES===
+## Technical CHALLENGES
   * API's & Query Search
   * Modals
 
-## Thoughtful ENHANCEMENTS ====
+## Thoughtful ENHANCEMENTS
   * Comment posting in forums
   * Angular Routing
   * Like buttons on forum memes
+  * Append forum posts to user model
