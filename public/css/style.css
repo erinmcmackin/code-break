@@ -2,6 +2,9 @@
   font-family: 'Hi Melody', cursive;
 }
 
+body {
+  margin: 0;
+}
 
 /* ============ */
 /* HEADER */
@@ -52,7 +55,7 @@ h1 {
 .jokes {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
+  padding: 40px 10px 10px;
 }
 
 .speech-bubble {
@@ -206,6 +209,10 @@ h1 {
   margin: 0;
 }
 
+.login, .create-user {
+  border-radius: 5px;
+}
+
 /* ============ */
 /* GIFS */
 /* ============ */
@@ -230,11 +237,39 @@ h1 {
   object-fit: cover;
 }
 
-
 /* ============ */
 /* LABELS / INPUTS / BUTTONS */
 /* ============ */
 
 label {
   font-size: 20px;
+}
+
+/* ============ */
+/* FOOTER */
+/* ============ */
+
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.footer1 > p {
+  margin: 0;
+}
+
+.footer1 {
+  float:left;
+  margin-left: 5%;
+}
+
+.footer2 > img {
+  height: 50px;
+  padding: 15%;
+}
+
+.footer2 {
+  float:right;
+  margin-right: 5%;
 }
