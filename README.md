@@ -24,8 +24,8 @@ Code-Break: Fun site for programmers to take a break from frustrating code!
     - Random joke generator
 
   * Forums
-   - Post an image with a caption
-   - Leave a comment
+    - Post an image with a caption
+    - Leave a comment
 
  * Funny GIFs and comics
    - Stretch goal
