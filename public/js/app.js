@@ -234,8 +234,8 @@ app.controller('codeBreak', ['$http',function($http){
     this.indexOfImageToShow = null;
     this.indexOfEditFormToShow = null;
     // clearing data so it doesn't appear when you go to edit another image
-    this.updatedImage = '';
-    this.updatedCaption = '';
+    // this.updatedImage = '';
+    // this.updatedCaption = '';
   };
 
   this.editImage = (image)=>{
@@ -249,8 +249,8 @@ app.controller('codeBreak', ['$http',function($http){
     }).then((response)=>{
       this.indexOfEditFormToShow = null;
       // clearing data so it doesn't appear when you go to edit another image
-      this.updatedImage = '';
-      this.updatedCaption = '';
+      // this.updatedImage = '';
+      // this.updatedCaption = '';
       this.getImages();
     });
   };
@@ -265,7 +265,6 @@ app.controller('codeBreak', ['$http',function($http){
     });
   };
 
-  // reactivate once routes are up
   this.getImages();
 
 // ============
