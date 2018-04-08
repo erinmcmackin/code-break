@@ -1,10 +1,23 @@
-* {
+/* * {
   font-family: 'Hi Melody', cursive;
-}
+} */
 
 body {
   margin: 0;
 }
+
+/* ============ */
+/* FONTS */
+/* ============ */
+
+h1, h2, h3, h4, nav {
+  font-family: 'Hi Melody', cursive;
+}
+
+p, label, input {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 
 /* ============ */
 /* HEADER */
@@ -36,6 +49,7 @@ h1 {
 .nav-li {
   margin-right: 20px;
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .pipe {
@@ -161,7 +175,7 @@ h1 {
 }
 
 .show-image-modal h3 {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .edit-image-modal {
@@ -171,7 +185,7 @@ h1 {
 }
 
 .edit-image-modal input, .edit-image-modal button {
-  font-size: 20px;
+  font-size: 18px;
   width: 400px;
   margin: 5px;
 }
@@ -179,6 +193,10 @@ h1 {
 .edit-image-modal h3 {
   font-size: 40px;
   margin-top: 0;
+}
+
+.forum-form, .gif-form {
+  padding-top: 10px;
 }
 
 /* ============ */
@@ -201,11 +219,11 @@ h1 {
 
 .register-modal h3, .login-modal h3 {
   font-size: 40px;
-  margin: 0 auto 5px;;
+  margin: 30px auto 5px;
 }
 
 .register-modal p, .login-modal p {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -242,7 +260,7 @@ h1 {
 /* ============ */
 
 label {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /* ============ */
@@ -250,7 +268,7 @@ label {
 /* ============ */
 
 footer {
-  margin: 0;
+  margin: 15px 0 0;
   padding: 0;
   width: 100%;
 }
