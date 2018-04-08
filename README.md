@@ -1,4 +1,4 @@
-# Code-Break: A GA Project
+# Code-Break: a GA Project
  By: Erin McMackin & Teilachanell
 
 ![alt text](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)
