@@ -14,9 +14,9 @@ Code-Break: Fun site for programmers to take a break from frustrating code!
 
 * Now that they've gotten that off of their chest the user is feeling much better and almost ready to get back to work, almost. The user wants needs a final boost of laughs. Let's give them gif gallery of programming funnies.
 
-* The user is in stitches. Spirits lifted, and life's essence restored the user found just they boost they needed by taking a code-break! But one more thing, the user might need to return one day, and would like like to see some variety. Let's add a user LogIn capability and a search bar to the gifs gallery so that the user can find new gifs. Remember, some may need more than others so lets let them pick how many.
+* The user is in stitches. Spirits lifted, and life's essence restored. But one more thing, the user might need to return one day and would like like to see some variet when they do. Let's add a user LogIn capability and a search bar in the gifs gallery. Remember, some souls will come more broken than others so lets let them choose how many laughs.
 
-* The user is all set to return the next time they need a Code-Break
+* The user is all set to return the next time they need a Code-Break!
 
 
 ## Vision Site Structure & Content
