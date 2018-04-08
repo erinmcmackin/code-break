@@ -1,9 +1,7 @@
 # Code-Break: A GA Project
  By: Erin McMackin & Teilachanell
 
-![] (https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif "Logo Title Text 1")
-
-![alt Text]https://www.amazing-animations.com/animations/computers4.gif "Logo Title Text 2")
+![alt text](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)
 
 ## ABOUT
 Code-Break: Fun site for programmers to take a break from frustrating code!
@@ -56,6 +54,7 @@ MeanStack:
 ## Technical CHALLENGES
   * API's & Query Search
   * Modals
+  * GIFY in markdown
 
 ## Thoughtful ENHANCEMENTS
   * Comment posting in forums
