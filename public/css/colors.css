@@ -21,35 +21,18 @@ nav{color: black;}
      color:white;
 }
 
-    /* *{background-color: #b6ecde;
-      background-color: #88a6a7;
-    }
+.jokes{
 
-    h1{color:black}
-
-    nav{
-        color: white;
-    }*/
-
-    .jokes{
-
-        background-color: white;
-    }
+    background-color: white;
+}
 
     /* ========== */
     /* Forums & gifs */
     /* ===========*/
 
-    /*-- CONTAINER-- */
-    /* .image-gallery,h2, form, label{background-color: #b6ecde } */
-
-/* option2 */
     nav{margin-right: 5%;}
     .image-gallery,.forum-form, .forum-lbl, .gif-lbl,.gif-form{background-color: white;}
     .forum-header, .gif-header{background-color: #b3cdc6;}
-     /* #cdeae2
-     #cae3dc
-    #b3cdc6 */
 
     /*--FORM & HEADER--*/
     .forum-form, .forum-header, .image-gallery, .gif-form, .gif-header{
@@ -73,27 +56,12 @@ nav{color: black;}
 
 
     .image{
-        /* background-color:#b37084; */
-                /* home color */
-
-        /* background-color:#dfb1b6; */
-                /* muted poink */
-
-        /* background-color:#f6deda; */
-            /* pinkish */
-
         border: 1px solid silver;
     }
 
-    /* h3{color:cadetblue;
-        color:lightcoral;
-        color:firebrick;
-        color:#b37084;
-    } */
-
 
     .caption{
-        /* background-color: #b6ecde; */
+
        margin-top: 0;
        margin-bottom: 5px;
        border-bottom:1px dotted #b37084;
@@ -112,15 +80,16 @@ nav{color: black;}
         color: white;
 
 }
-/*=======  */
-/* MODALS */
-/*========  */
+/* =============  */
+/*   MODALS       */
+/* =============  */
 
- /* .login-modal, .register-modal,  */
+
  .login, .create-user{ background-color: #b6ecde;
      padding-bottom: 70px;
     }
   .modal-header{color:#b37084}
+
 /*=======  */
 /* FOOTER  */
 /*========  */
