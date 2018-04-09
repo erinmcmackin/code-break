@@ -3,7 +3,7 @@
 /* All PAGES */
 /* ===========*/
 
-body{background-color: #b6ecde;
+body{background-color: #a7d7ca;
     /* background-color: #88a6a7; */
 }
 
@@ -83,7 +83,7 @@ nav{color: black;}
 /*========  */
 
 
- .login, .create-user{ background-color: #b6ecde;
+ .login, .create-user{ background-color: #a7d7ca;
      padding-bottom: 70px;
     }
   .modal-header{color:#b37084}
