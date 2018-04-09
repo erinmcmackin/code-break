@@ -3,7 +3,7 @@
 
  By: Erin McMackin & Teilachanell
 
-Heroku:(https://code-break.herokuapp.com/)
+Heroku:https://code-break.herokuapp.com/
 
 ![alt text](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)
 
