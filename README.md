@@ -5,7 +5,7 @@
 
 Heroku:https://code-break.herokuapp.com/
 
-![alt text](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)
+![laughing](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)){:height="5px" width="5px"}
 
 ## Vision Site Structure & Content
   * Programming jokes
