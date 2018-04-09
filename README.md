@@ -19,7 +19,7 @@ Heroku:https://code-break.herokuapp.com/
    - Stretch goal
 
 ## User Stories
-Code-Break: Fun site for programmers to take a break from frustrating code!
+###Code-Break: Fun site for programmers to take a break from frustrating code!
 
 * Oh no the user's code is broken! User is on the brink of tears and needs something to make them laugh. They want to be able to click a button and see a joke.
 
