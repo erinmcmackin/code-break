@@ -18,7 +18,7 @@ Heroku:https://code-break.herokuapp.com/
     - Leave a comment
 
  *  GIF Gallery
-   - Stretch goal
+    - Stretch goal
 
 ## User Stories
 
