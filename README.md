@@ -1,7 +1,9 @@
 # Code-Break
  A GA Project
- 
+
  By: Erin McMackin & Teilachanell
+
+![alt text](https://code-break.herokuapp.com/)
 
 ![alt text](https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif)
 
@@ -56,10 +58,13 @@ MeanStack:
 ## Technical CHALLENGES
   * API's & Query Search
   * Modals
+  * Clearing Forms
   * GIFY in markdown
+
 
 ## Thoughtful ENHANCEMENTS
   * Comment posting in forums
   * Angular Routing
   * Like buttons on forum memes
   * Append forum posts to user model
+  * Have forms clear after each entry.
