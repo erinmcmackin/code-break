@@ -1,20 +1,8 @@
 console.log("app.js is connected");
 
-//create module with name app.
 const app = angular.module('codeBreak', []);
 
 
-//'ngRoute'
-// app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
-//     $locationProvider.html5Mode({enabled:true});
-//     $routeProvider.when('/forums', {
-//         templateUrl: 'forums.html',
-//         controller:'codeBreak',
-//         controllerAs: 'ctrl'
-//     })
-// }])
-
-// Create controller: takes 2 parameters controllerName and and array. A function must be the last element in the array. call the angular $http module in the function & a variable for it
 app.controller('codeBreak', ['$http',function($http){
 
   this.test="testing"
@@ -87,19 +75,6 @@ app.controller('codeBreak', ['$http',function($http){
       this.showJoke = false;
    }
 
- // this.createJoke = ()=>{
- //        $http({
- //            method: 'POST',
- //            url: '/jokes',
- //            data:{
- //                joke:
- //                answer:
- //            }
- //        }).then((response)=>{console.log(response); this.joke = response.data.joke; this.answer = response.data.answer},
- //         (error)=>{error}
- //
- // }
-// this.getJoke();
 
   // =============
   // USERS
@@ -130,15 +105,6 @@ app.controller('codeBreak', ['$http',function($http){
   this.closeRegisterModal = ()=>{
     this.showRegisterModal = false;
   };
-
-// this.deleteUser = (id)=>{
-//     $http(
-//         {
-//             method:'DELETE',
-//             url:'/users/' + id
-//         }
-//     )then.((response)=>{console.log(response);}, (error)=>{console.log(error);})
-// }
 
   // =============
   // SESSIONS
@@ -305,9 +271,6 @@ app.controller('codeBreak', ['$http',function($http){
         this.lang = '&lang='+'en'
             // this.query = '&q='+'programming';
             // this.limit = '&limit='+'24';
-                // this.path = 'v1/gifs/'+'random?';
-            // this.tag = '&tag='+'programming';
-            // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
         this.searchURL = this.hostURL+ this.path + this.apiKey +this.query+this.limit;
             console.log(this.searchURL);
 
@@ -328,3 +291,14 @@ app.controller('codeBreak', ['$http',function($http){
   this.getGify();
 
 }])
+
+
+//'ngRoute'
+// app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
+//     $locationProvider.html5Mode({enabled:true});
+//     $routeProvider.when('/forums', {
+//         templateUrl: 'forums.html',
+//         controller:'codeBreak',
+//         controllerAs: 'ctrl'
+//     })
+// }])
