@@ -68,3 +68,5 @@ MeanStack:
   * Like buttons on forum memes
   * Append forum posts to user model
   * Have forms clear after each entry.
+
+Trello: https://trello.com/b/06lTJEVS
