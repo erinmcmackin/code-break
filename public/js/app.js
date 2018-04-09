@@ -60,7 +60,6 @@ app.controller('codeBreak', ['$http',function($http){
 
   this.getJoke = ()=>{
 
-      //call $http function, takes an object parameter with method, url, and data propeties
       $http(
           {
               method:'GET',
@@ -87,19 +86,7 @@ app.controller('codeBreak', ['$http',function($http){
       this.showJoke = false;
    }
 
- // this.createJoke = ()=>{
- //        $http({
- //            method: 'POST',
- //            url: '/jokes',
- //            data:{
- //                joke:
- //                answer:
- //            }
- //        }).then((response)=>{console.log(response); this.joke = response.data.joke; this.answer = response.data.answer},
- //         (error)=>{error}
- //
- // }
-// this.getJoke();
+
 
   // =============
   // USERS
@@ -131,14 +118,7 @@ app.controller('codeBreak', ['$http',function($http){
     this.showRegisterModal = false;
   };
 
-// this.deleteUser = (id)=>{
-//     $http(
-//         {
-//             method:'DELETE',
-//             url:'/users/' + id
-//         }
-//     )then.((response)=>{console.log(response);}, (error)=>{console.log(error);})
-// }
+
 
   // =============
   // SESSIONS
@@ -305,8 +285,6 @@ app.controller('codeBreak', ['$http',function($http){
         this.lang = '&lang='+'en'
             // this.query = '&q='+'programming';
             // this.limit = '&limit='+'24';
-                // this.path = 'v1/gifs/'+'random?';
-            // this.tag = '&tag='+'programming';
             // this.searchURL = this.hostURL+ this.path + this.apiKey +this.tag;
         this.searchURL = this.hostURL+ this.path + this.apiKey +this.query+this.limit;
             console.log(this.searchURL);
