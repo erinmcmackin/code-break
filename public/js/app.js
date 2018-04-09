@@ -32,7 +32,7 @@ app.controller('codeBreak', ['$http',function($http){
     // =============
 
     this.chgColor_Home = ()=>{
-        this.bodyColor='#b6ecde';
+        this.bodyColor='#a7d7ca';
         this.navColor = '#000000';
     }
 
